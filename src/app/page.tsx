@@ -15,7 +15,7 @@ export default function Page() {
         <div className="w-[249px] h-[249px] left-[811px] top-[267px] absolute bg-rose-100" />
     </div>
     <div className="w-[1440px] h-40 left-0 top-[1202px] absolute bg-rose-100" />
-    <div className="left-[47px] top-[1185px] absolute text-green-600 text-[40px] font-normal font-['Tomarik'] uppercase leading-[25px]">Let’s connect!</div>
+    <div className="left-[47px] top-[1185px] absolute text-green-600 text-[40px] font-normal font-sans uppercase leading-[25px]">Let’s connect!</div>
     <div className="left-[50px] top-[1245px] absolute text-lime-900 text-base font-normal font-['Corbel'] leading-[23px] tracking-wide">Email me at: yasuda.i@ufl.edu<br/>Text me at: (561)339-0255<br/>My LinkedIn: https://www.linkedin.com/in/izumi-yasuda/</div>
     <div className="w-10 h-[25px] left-[41px] top-[168px] absolute">
         <div className="w-10 h-3 left-0 top-[10px] absolute bg-rose-100" />

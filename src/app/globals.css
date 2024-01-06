@@ -4,11 +4,11 @@
 
 :root {
   --foreground: black;
-  --background-start: stone-50;
-  --background-end: stone-50;
+  --background-start: white;
+  --background-end: white;
 }
 
-@media () {
+@media screen and (max-width:249px){
   :root {
     --background-start: rose-100;
     --background-end: rose-100;
