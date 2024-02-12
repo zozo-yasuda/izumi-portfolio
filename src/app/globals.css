@@ -1,17 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/*
 :root {
   --foreground: black;
   --background-start: white;
   --background-end: white;
 }
 
-@media screen and (max-width:249px){
+@media screen and (max-width: 249px) {
   :root {
     --background-start: rose-100;
     --background-end: rose-100;
   }
 }
 
+nav-bar {
+  background-color: white;
+}
+*/
