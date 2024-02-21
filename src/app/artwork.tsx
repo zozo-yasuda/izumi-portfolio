@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Image from "next/image";
 
 export class Artwork {
@@ -17,13 +16,6 @@ export class Artwork {
   }
 
   render() {
-    const [image, setImage] = useState(this.thumbnail);
-    const handleMouseOver = () => {
-      setImage(this.desc);
-    };
-    const handleMouseOut = () => {
-      setImage(this.thumbnail);
-    };
     return (
       <div className="h-auto max-w-full" key={this.key}>
         <Image
@@ -31,8 +23,6 @@ export class Artwork {
           alt={this.alt}
           width={this.width}
           height={this.height}
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
         />
       </div>
     );
