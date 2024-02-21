@@ -4,7 +4,7 @@ const Logo = require("./Logo").default;
 
 const Navbar = () => {
   return (
-    <nav className="bg-white sticky w-full z-50 top-0 start-0">
+    <nav className="bg-offwhite shadow sticky w-full z-50 top-0 start-0">
       <div className="relative max-w-screen-xl container flex flex-wrap items-center justify-between mx-auto p-4 ">
         <Logo />
         <div
@@ -23,7 +23,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="#" className="block py-2 px-3">
+              <Link href="#footer" className="block py-2 px-3">
                 <p>Contact</p>
               </Link>
             </li>

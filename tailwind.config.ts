@@ -14,8 +14,12 @@ const config: Config = {
       colors: {
         green: "rgb(80,153,68)",
         lime: "rgb(39,97,29)",
-        offwhite: "hex(#FBF7F7)",
-        rose: "hex(#FCE3E6)",
+        offwhite: "#FBF7F7",
+        rose: "#FCE3E6",
+        pink: "#F6AEB6",
+      },
+      leading: {
+        extraloose: "32",
       },
     },
   },

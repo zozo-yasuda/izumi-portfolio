@@ -6,7 +6,7 @@ export default function Page() {
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-4">
           <div className="col-span-2">
-            <h1 className="mb-4 text-green font-sans tracking-tight leading-non md:text-5xl lg:text-6xl">
+            <h1 className="mb-2 text-green font-sans tracking-tight leading-non md:text-5xl lg:text-6xl">
               I’m Izumi.
             </h1>
             <h2 className="mb-8 text-lime font-sans">
