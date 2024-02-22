@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Tomarik Introvert", "Corbel", "Calibri", "sans-serif"],
+        sans: ["tomarik-introvert", "Corbel", "Calibri", "sans-serif"],
       },
       colors: {
         green: "rgb(80,153,68)",

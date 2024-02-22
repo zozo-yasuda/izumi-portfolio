@@ -1,4 +1,4 @@
-import Navigation from "./components/navigation/navbar";
+import Navigation from "./components/navigation";
 import Footer from "./components/footer";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -18,6 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head><link rel="stylesheet" href="https://use.typekit.net/lub1ege.css" /></head>
       <body className={inter.className}>
         <Navigation />
         {children}

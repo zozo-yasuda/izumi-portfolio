@@ -28,6 +28,7 @@ const ImageStack = (props: ImageStackProps) => {
         >
         <Image
         style={{
+            transition: 'opacity 0.5s ease-in-out',
             opacity: isHovered ? 0: 1,
             position: 'absolute',
             objectFit: 'contain',
@@ -41,6 +42,7 @@ const ImageStack = (props: ImageStackProps) => {
         />
         <Image
         style={{
+            transition: 'opacity 0.5s ease-in-out',
             opacity: isHovered? 1:0,
             position: 'absolute',
             objectFit: 'contain',

@@ -1,12 +1,26 @@
-const React = require("react");
+import React, {useState} from 'react';
 
-const Filters = () => {
+const Filters = ({ onFilterChange }: { onFilterChange: (filter:string) => void }) => {
+  const [activeFilter, setActiveFilter] = useState('ALL');
+
+  const handleFilterClick = (filter:string) => {
+    setActiveFilter(filter);
+    onFilterChange(filter);
+  };
+
   return (
     <div className="text-black font-sans leading-extraloose">
       <ul>
-        {["ALL", "BRANDING", "PRINT", "MOTION", "ILLUSTRATION"].map(
+        {["all", "branding", "print", "motion", "illustration"].map(
           (filter, index) => (
-            <li key={index}>{filter}</li>
+            <li 
+              key={index} 
+              onClick={() => handleFilterClick(filter)}
+              style={{ cursor: 'pointer', color: activeFilter === filter ? 'pink' : 'black' }}
+            className = "uppercase"
+            >
+              {filter}
+            </li>
           )
         )}
       </ul>
