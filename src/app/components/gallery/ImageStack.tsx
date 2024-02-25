@@ -33,8 +33,9 @@ const ImageStack = (props: ImageStackProps) => {
             position: 'absolute',
             objectFit: 'contain',
             left: 0,
-            top:0
+            top:0 
         }}
+        className = "shadow-xl"
           src={props.artwork.thumbnail}
           alt={props.artwork.alt}
           width={props.artwork.width}
@@ -49,6 +50,7 @@ const ImageStack = (props: ImageStackProps) => {
             left: 0,
             top:0
         }}
+        className = "shadow-xl"
           src={props.artwork.desc}
           alt={props.artwork.descAlt}
           width={props.artwork.width}
