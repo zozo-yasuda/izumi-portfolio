@@ -10,9 +10,9 @@ const Navbar = () => {
   }
 
   const menuItems = (
-    [['/','Work'],['/about','About'],['/contact','Contact']].map(([path, label]) => {
+    [['/','Work'],['/about','About'],['/contact','Contact']].map(([path, label],index) => {
       return (
-      <li>
+      <li key={index}>
       <span onClick={() => handleClick(path)} className="relative inline-block cursor-pointer">
         <div className="relative z-10"><Link href = {path} className="block py-2 px-3"><h1 className="text-green tracking-18">{label}</h1></Link></div>
         {activeLink === path && (
