@@ -8,12 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      letterSpacing: {
+        '18': '0.18em',
+      },
       fontFamily: {
-        sans: ["tomarik-introvert", "Corbel", "Calibri", "sans-serif"],
+        sans: ["Corbel", "Calibri", "sans-serif"],
+        'tomarik': ['tomarik-introvert', 'sans-serif'],
       },
       colors: {
-        green: "rgb(80,153,68)",
-        lime: "rgb(39,97,29)",
+        green: "#27611D",
+        lime: "#509944",
         offwhite: "#FBF7F7",
         rose: "#FCE3E6",
         pink: "#F6AEB6",
