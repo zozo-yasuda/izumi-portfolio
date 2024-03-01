@@ -4,9 +4,10 @@ import FooterText from './footerText';
 
 const Footer = ()=>
 {
+    const exceptions = ['/contact', '/fauxflorida'];
     return (
-      <div className='bg-offwhite'>
-        {usePathname()!== '/contact' && <FooterText />}
+      <div>
+        {!exceptions.includes(usePathname()) && <FooterText />}
       </div>
     );
 }

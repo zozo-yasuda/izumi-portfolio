@@ -6,17 +6,17 @@ import ImageStack from "./ImageStack";
 const Gallery = () => {
 
   const artworks:Array<Artwork> = [
-    new Artwork(1, "Image 1", "Desc 1", "/thumbnails/tn1.png", "/descs/desc1.png", ["print"]),
-    new Artwork(2, "Image 2", "Desc 2", "/thumbnails/tn2.png", "/descs/desc2.png", ["branding"]),
-    new Artwork(3, "Image 3", "Desc 3", "/thumbnails/tn3.png", "/descs/desc3.png", ["print","marketing"]),
-    new Artwork(4, "Image 4", "Desc 4", "/thumbnails/tn4.png", "/descs/desc4.png", ["marketing"]),
-    new Artwork(5, "Image 5", "Desc 5", "/thumbnails/tn5.png", "/descs/desc5.png", ["illustration"]),
-    new Artwork(6, "Image 6", "Desc 6", "/thumbnails/tn6.png", "/descs/desc6.png", ["motion","marketing"]),
-    new Artwork(7, "Image 7", "Desc 7", "/thumbnails/tn7.png", "/descs/desc7.png", ["branding"]),
-    new Artwork(8, "Image 8", "Desc 8", "/thumbnails/tn8.png", "/descs/desc8.png", ["branding","print","motion"]),
-    new Artwork(9, "Image 9", "Desc 9", "/thumbnails/tn9.png", "/descs/desc9.png", ["branding"]),
-    new Artwork(10, "Image 10", "Desc 10", "/thumbnails/tn10.png", "/descs/desc10.png", ["branding","motion"]),
-    new Artwork(11, "Image 11", "Desc 11", "/thumbnails/tn11.png", "/descs/desc11.png", ["branding", "print"]),
+    new Artwork("/fauxflorida", "Image 1", "Desc 1", "/thumbnails/tn1.png", "/descs/desc1.png", ["print"]),
+    new Artwork("/soluna", "Image 2", "Desc 2", "/thumbnails/tn2.png", "/descs/desc2.png", ["branding"]),
+    new Artwork("/kisuitechflyer", "Image 3", "Desc 3", "/thumbnails/tn3.png", "/descs/desc3.png", ["print","marketing"]),
+    new Artwork("/akm30", "Image 4", "Desc 4", "/thumbnails/tn4.png", "/descs/desc4.png", ["marketing"]),
+    new Artwork("/musictheorycat", "Image 5", "Desc 5", "/thumbnails/tn5.png", "/descs/desc5.png", ["illustration"]),
+    new Artwork("/designheros", "Image 6", "Desc 6", "/thumbnails/tn6.png", "/descs/desc6.png", ["motion","marketing"]),
+    new Artwork("/fetzandottoswimwear", "Image 7", "Desc 7", "/thumbnails/tn7.png", "/descs/desc7.png", ["branding"]),
+    new Artwork("/therabbithole", "Image 8", "Desc 8", "/thumbnails/tn8.png", "/descs/desc8.png", ["branding","print","motion"]),
+    new Artwork("/fetzandottodaycare", "Image 9", "Desc 9", "/thumbnails/tn9.png", "/descs/desc9.png", ["branding"]),
+    new Artwork("/sweetsketch", "Image 10", "Desc 10", "/thumbnails/tn10.png", "/descs/desc10.png", ["branding","motion"]),
+    new Artwork("/izumiyasuda", "Image 11", "Desc 11", "/thumbnails/tn11.png", "/descs/desc11.png", ["branding", "print"]),
   ];
 
   const [filteredArtworks, setFilteredArtworks] = useState(artworks);

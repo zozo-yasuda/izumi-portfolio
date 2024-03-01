@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Artwork from "../models/Artwork";
 
 type ImageStackProps = {
@@ -26,6 +27,7 @@ const ImageStack = (props: ImageStackProps) => {
             height: props.artwork.height,
             width: props.artwork.width}}
         >
+        <Link href = {props.artwork.key}>
         <Image
         style={{
             transition: 'opacity 0.5s ease-in-out',
@@ -56,6 +58,7 @@ const ImageStack = (props: ImageStackProps) => {
           width={props.artwork.width}
           height={props.artwork.height}
         />
+        </Link>
         </div>
     );
 };

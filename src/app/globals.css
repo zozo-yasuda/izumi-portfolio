@@ -13,3 +13,15 @@
   font-weight: 900;
   font-style: normal;
 }
+
+.parent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rose;
+  transform: scaleY(0.75);
+  z-index: -1;
+}

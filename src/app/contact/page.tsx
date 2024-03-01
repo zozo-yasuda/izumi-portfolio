@@ -20,7 +20,7 @@ const ContactPage: React.FC = () => {
               let&apos;s connect!
             </h1>
             <br />
-            <p className="text-green font-sans leading-tight">
+            <p className="text-green font-sans leading-tight tracking-5">
               Email me at: yasuda.i@ufl.edu
               <br />
               Text me at: (561)339-0255

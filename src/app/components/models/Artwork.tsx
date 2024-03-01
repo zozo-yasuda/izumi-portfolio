@@ -1,6 +1,6 @@
 
 export class Artwork {
-  key: number;
+  key: string;
   alt: string;
   descAlt: string;
   thumbnail: string;
@@ -9,7 +9,7 @@ export class Artwork {
   width: number = 249;
   height: number = 249;
 
-  constructor(key: number, alt: string, descAlt: string, thumbnail: string, desc: string, tags: String[]=[]) {
+  constructor(key: string, alt: string, descAlt: string, thumbnail: string, desc: string, tags: String[]=[]) {
     this.key = key;
     this.alt = alt;
     this.descAlt = descAlt;
