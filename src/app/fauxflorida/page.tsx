@@ -14,7 +14,7 @@ export default function Page() {
           width={800}
           height={1500} 
           className = "h-full w-full">
-            <p>It appears you don't have a PDF plugin for this browser. You can <Link href="/fauxflorida/ff1.pdf">click here to download the PDF file.</Link></p>
+            <p>It appears you don&apos;t have a PDF plugin for this browser. You can <Link href="/fauxflorida/ff1.pdf">click here to download the PDF file.</Link></p>
           </object>
         </div>
     </section>
