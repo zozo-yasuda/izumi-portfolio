@@ -17,7 +17,12 @@ export default function RootLayout({children
 }) {
   return (
     <html lang="en">
-      <head><link rel="stylesheet" href="https://use.typekit.net/lub1ege.css" /></head>
+      <head>
+      <link rel="stylesheet" href="https://use.typekit.net/lub1ege.css" />
+      <link rel="icon" href="/favilight.webp"  media="(prefers-color-scheme: light)" />
+      <link rel="icon" href="/favidark.png"  media="(prefers-color-scheme: dark)" />
+      </head>
+      
       <body className={inter.className}>
         <Navigation />
         {children}

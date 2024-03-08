@@ -18,9 +18,9 @@ const Logo = () => {
   }, []);
 
   return (
-    <div className="flex items-center space-x-3 rtl:space-x-reverse">
+    <div className="flex flex-shrink-0 items-center">
       <Link href="/">
-        <Image src="/Logo.png" alt="Logo" width={153} height={81} />
+        <Image src="/Logo.png" alt="Logo" width={153} height={81}/>
       </Link>
     </div>
   );

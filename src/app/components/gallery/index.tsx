@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Filters from "./filters";
 import Artwork from "../models/Artwork";
 import ImageStack from "./ImageStack";
+import {TransitionGroup, CSSTransition} from "react-transition-group";
+
+
 
 const Gallery = () => {
 
@@ -31,17 +34,37 @@ const Gallery = () => {
     }
   };
 
+  const [displayedArtworks, setDisplayedArtworks] = useState<Artwork[]>([]);
+  useEffect(() => {
+    // When filteredArtworks changes, first set displayedArtworks to an empty array
+    setDisplayedArtworks([]);
+  
+    // Then, after a delay equal to the transition duration, set displayedArtworks to the new artworks
+    const timeoutId = setTimeout(() => {
+      setDisplayedArtworks(filteredArtworks);
+    }, 500); // This should match the duration of your exit animation
+  
+    // Clean up the timeout when the component unmounts or when filteredArtworks changes
+    return () => clearTimeout(timeoutId);
+  }, [filteredArtworks]);
+
 
   return (
-    <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
-      <div className="grid grid-cols-5 gap-4">
+    <div className="py-4 px-4 min-h-screen">
+      <div className="flex flex-wrap">
+        <div className="flex justify-center top-0 left-0">
         <Filters onFilterChange={handleFilterChange} />
-        <div className="grid col-span-4 grid-cols-4 md:grid-cols-4 gap-4">
-          {filteredArtworks.map((artwork:Artwork)=> {return (<ImageStack key={artwork.key} artwork={artwork}/>);})}
+        </div>
+        <TransitionGroup className="mx-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {displayedArtworks.map((artwork:Artwork)=> (
+            <CSSTransition key={artwork.key} timeout={500} classNames="item" appear>
+              <ImageStack artwork={artwork} />
+            </CSSTransition>
+            ))}
+          </TransitionGroup>
         </div>
       </div>
-    </div>
-  );
+      );
 };
 
 export default Gallery;

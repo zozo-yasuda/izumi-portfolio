@@ -6,7 +6,7 @@ const Footer = ()=>
 {
     const exceptions = ['/contact', '/fauxflorida'];
     return (
-      <div>
+      <div className="pt-6 bg-offwhite">
         {!exceptions.includes(usePathname()) && <FooterText />}
       </div>
     );

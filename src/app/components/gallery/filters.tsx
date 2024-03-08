@@ -1,25 +1,36 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 
 const Filters = ({ onFilterChange }: { onFilterChange: (filter:string) => void }) => {
-  const [activeFilter, setActiveFilter] = useState('ALL');
+  const [activeFilter, setActiveFilter] = useState('all');
 
   const handleFilterClick = (filter:string) => {
     setActiveFilter(filter);
     onFilterChange(filter);
   };
 
+  const [fontSize, setFontSize] = useState('16px');
+  useEffect(() => {
+    const handleResize = () => {
+      setFontSize(window.innerWidth > 768 ? '16px' : '12px');
+    };
+  
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+    
   return (
-    <div className="text-black font-sans leading-extraloose">
+    <aside className="p-6 text-black font-sans leading-extraloose">
       <ul className = "space-y-4">
-        <li><br /><br /></li>
-        {["all", "branding", "print", "motion", "illustration"].map(
+        {["all", "branding", "print", "motion", "marketing","illustration"].map(
           (filter, index) => (
             <li 
               key={index}
             className = "uppercase tracking-18 text-green"
             >
               <span onClick={() => handleFilterClick(filter)} className="relative inline-block cursor-pointer">
-              <div className="text-green tracking-18 relative z-10">
+              <div className="text-green tracking-18 relative z-10" style={{ fontSize: fontSize }}>
                 {filter}
               </div>
               {activeFilter === filter && (
@@ -30,7 +41,7 @@ const Filters = ({ onFilterChange }: { onFilterChange: (filter:string) => void }
           )
         )}
       </ul>
-    </div>
+    </aside>
   );
 };
 

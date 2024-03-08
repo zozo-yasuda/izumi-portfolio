@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Artwork from "../models/Artwork";
@@ -19,8 +19,10 @@ const ImageStack = (props: ImageStackProps) => {
         setIsHovered(false);
     };
 
+
     return (
-        <div className="h-auto max-w-full" key={props.artwork.key}
+        <div className="flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1 md:p-2"
+        key={props.artwork.key}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{ position: 'relative',
@@ -41,7 +43,7 @@ const ImageStack = (props: ImageStackProps) => {
           src={props.artwork.thumbnail}
           alt={props.artwork.alt}
           width={props.artwork.width}
-          height={props.artwork.height}
+          height={props.artwork.width}
         />
         <Image
         style={{
@@ -56,7 +58,7 @@ const ImageStack = (props: ImageStackProps) => {
           src={props.artwork.desc}
           alt={props.artwork.descAlt}
           width={props.artwork.width}
-          height={props.artwork.height}
+          height={props.artwork.width}
         />
         </Link>
         </div>
