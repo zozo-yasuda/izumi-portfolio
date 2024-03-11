@@ -36,6 +36,7 @@ const Gallery = () => {
 
   const [displayedArtworks, setDisplayedArtworks] = useState<Artwork[]>([]);
   useEffect(() => {
+
     // When filteredArtworks changes, first set displayedArtworks to an empty array
     setDisplayedArtworks([]);
   
@@ -43,25 +44,24 @@ const Gallery = () => {
     const timeoutId = setTimeout(() => {
       setDisplayedArtworks(filteredArtworks);
     }, 500); // This should match the duration of your exit animation
-  
+    
     // Clean up the timeout when the component unmounts or when filteredArtworks changes
-    return () => clearTimeout(timeoutId);
+    return () => {clearTimeout(timeoutId);
+    };
   }, [filteredArtworks]);
 
 
   return (
-    <div className="py-4 px-4 min-h-screen">
-      <div className="flex flex-wrap">
-        <div className="flex justify-center top-0 left-0">
-        <Filters onFilterChange={handleFilterChange} />
-        </div>
-        <TransitionGroup className="mx-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {displayedArtworks.map((artwork:Artwork)=> (
-            <CSSTransition key={artwork.key} timeout={500} classNames="item" appear>
-              <ImageStack artwork={artwork} />
-            </CSSTransition>
-            ))}
-          </TransitionGroup>
+    <div className="pb-6 sm:p-6 px-4 min-h-screen">
+        <div className = "flex flex-col sm:flex-row">
+            <Filters onFilterChange={handleFilterChange} />
+            <TransitionGroup className="mx-auto grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {displayedArtworks.map((artwork:Artwork)=> (
+                <CSSTransition key={artwork.key} timeout={500} classNames="item" appear>
+                  <ImageStack artwork={artwork} />
+                </CSSTransition>
+              ))}
+            </TransitionGroup>
         </div>
       </div>
       );

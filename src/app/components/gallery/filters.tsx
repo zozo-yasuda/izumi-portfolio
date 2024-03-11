@@ -1,4 +1,6 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
+
+const filterTags = ["all", "branding", "print", "motion", "marketing","illustration"];
 
 const Filters = ({ onFilterChange }: { onFilterChange: (filter:string) => void }) => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -8,39 +10,31 @@ const Filters = ({ onFilterChange }: { onFilterChange: (filter:string) => void }
     onFilterChange(filter);
   };
 
-  const [fontSize, setFontSize] = useState('16px');
-  useEffect(() => {
-    const handleResize = () => {
-      setFontSize(window.innerWidth > 768 ? '16px' : '12px');
-    };
-  
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const filterItems = (
+    filterTags.map(
+      (filter, index) => (
+        <li 
+          key={index}
+          className = "uppercase tracking-18 text-green p-2"
+        >
+          <span onClick={() => handleFilterClick(filter)} className="relative inline-block cursor-pointer">
+          <div className="text-green tracking-18 relative z-10 text-xs sm:text-sm px-2">
+            {filter}
+          </div>
+          {activeFilter === filter && (
+          <div className="absolute bottom-1 left-auto right-auto w-full h-2 bg-rose z-0"></div>
+          )}
+          </span>
+        </li>
+      )
+  )
+  );
     
   return (
-    <aside className="p-6 text-black font-sans leading-extraloose">
-      <ul className = "space-y-4">
-        {["all", "branding", "print", "motion", "marketing","illustration"].map(
-          (filter, index) => (
-            <li 
-              key={index}
-            className = "uppercase tracking-18 text-green"
-            >
-              <span onClick={() => handleFilterClick(filter)} className="relative inline-block cursor-pointer">
-              <div className="text-green tracking-18 relative z-10" style={{ fontSize: fontSize }}>
-                {filter}
-              </div>
-              {activeFilter === filter && (
-              <div className="absolute bottom-1 left-auto right-auto w-full h-2 bg-rose z-0"></div>
-          )}
-              </span>
-            </li>
-          )
-        )}
-      </ul>
+    <aside className="font-sans leading-extraloose p-2">
+              <ul className="text-xs flex flex-row flex-wrap sm:flex-col">
+                {filterItems}
+              </ul>
     </aside>
   );
 };

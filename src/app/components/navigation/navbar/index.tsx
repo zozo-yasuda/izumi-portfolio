@@ -35,9 +35,10 @@ const Navbar = () => {
       return (
       <li key={index}>
       <span onClick={() => handleClick(path)} className="relative inline-block cursor-pointer">
-        <div className="relative z-10"><Link href = {path} className="block py-2 px-3"><h1 className="text-green font-sans uppercase tracking-18">{label}</h1></Link></div>
+        <div className="relative z-10"><Link href = {path} className="block py-2 px-3"><h1 className="text-green font-sans uppercase tracking-18">
+          {label}</h1></Link></div>
         {activeLink === path && (
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/6 w-3/4 h-2 bg-rose z-0"></div>
+              <div className="absolute bottom-3 left-auto right-auto h-2 w-full bg-rose z-0"></div>
           )}
       </span> 
       </li>
@@ -52,7 +53,7 @@ const Navbar = () => {
         <div className='flex justify-between items-center'>
         <MobileLogo />
             <div className=''>
-              <ul className="flex justify-end px-6 mt-4 ">
+              <ul className="text-xs flex justify-end px-6 ">
                 {menuItems}
               </ul>
             </div>
