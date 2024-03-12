@@ -6,7 +6,7 @@ export default function Page() {
       <div className="p-8 lg:py-16">
         <span className="relative inline-block">
           <h1 className="relative z-10 mb-2 text-lime uppercase font-tomarik text-6xl">
-            HI, I’m Izumi.
+            HI, I&apos;m Izumi.
           </h1>
           <div className="absolute bottom-0 left-auto right-auto w-full bg-rose z-0"></div>
         </span>
