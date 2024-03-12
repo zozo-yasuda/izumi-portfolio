@@ -1,20 +1,17 @@
 const ContactPage: React.FC = () => {
   return (
-    <div className="bg-offwhite h-screen">
+    <div className="bg-offwhite h-screen pt-6">
       <div
-        className="z-50"
+        className="z-50 h-1/2 flex justify-center items-center "
         style={{
           backgroundImage: `url('/contactPage.png')`,
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundPosition: "right",
           backgroundRepeat: "no-repeat",
-          width: "50w",
         }}
       >
-        <div className="my-auto mx-auto max-w-screen lg:py-4">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-4">
-            <div className="col-start-2 col-end-5">
-              <h1 className="pt-20 text-lime  text-6xl font-tomarik uppercase">
+        <div className="relative max-w-screen lg:py-4">
+              <h1 className="text-lime text-6xl font-tomarik uppercase">
                 let&apos;s connect!
               </h1>
               <br />
@@ -25,13 +22,9 @@ const ContactPage: React.FC = () => {
                 <br />
                 My LinkedIn: https://www.linkedin.com/in/izumi-yasuda/
               </p>
-              <br />
-              <br />
             </div>
           </div>
         </div>
-      </div>
-    </div>
   );
 };
 
