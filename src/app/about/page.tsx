@@ -18,7 +18,7 @@ export default function Page() {
           I am a graphic designer and a third year undergraduate student at UF.
           I have international graphic design experience as an intern, designing
           flyers, web designs, and motion graphics for a modern tech startup.
-          I'm also the multimedia creative director for the Asian Kaleidoscope
+          I am also the multimedia creative director for the Asian Kaleidoscope
           Month (AKM) club.
         </p>
       </div>
