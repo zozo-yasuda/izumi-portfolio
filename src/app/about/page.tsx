@@ -22,13 +22,15 @@ export default function Page() {
           Month (AKM) club.
         </p>
       </div>
+      <div className="relative w-full h-0 pb-[77.14%]"> 
         <Image
           src="/aboutImage.png"
           alt="Izumi Yasuda"
-          width={800}
-          height={800}
-          layout="absolute"
+          layout = "fill"
+          objectFit="contain"
+          objectPosition="right"
         />
+        </div>
     </section>
   );
 }

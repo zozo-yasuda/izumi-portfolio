@@ -6,7 +6,7 @@ const Sidebar = (title: string, prompt: string) => {
       <div className="sm:pt-6"></div>
       <Link
         href="/"
-        className="p-2 sm:p-6 font-sans text-green tracking-18 uppercase sm:text-sm md:text-md lg:text-xl"
+        className="p-2 sm:p-6 font-sans text-green tracking-18 uppercase text-sm"
       >
         &lt;back
       </Link>
