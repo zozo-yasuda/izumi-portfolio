@@ -27,8 +27,9 @@ const ImageStack = (props: ImageStackProps) => {
     const handleMouseLeave = () => {
         setIsHovered(false);
     };
-    const tagsList = Array.from(props.artwork.tags).map((tag) =>
-        <div className="text-green font-sans text-md uppercase pl-5 tracking-18">{tag}</div>);
+    const tagsList = Array.from(props.artwork.tags).map((tag,index) =>
+        <div className="text-green font-sans text-md uppercase pl-5 tracking-18"
+            key = {index}>{tag}</div>);
 
     return (
         <div className="flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2"
