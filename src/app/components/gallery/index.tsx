@@ -8,7 +8,7 @@ const Gallery = () => {
   const artworks: Array<Artwork> = [
     new Artwork(
       "/fauxflorida",
-      "Image 1",
+      "FAUX FLORIDA",
       "Desc 1",
       "/thumbnails/tn1.png",
       "/descs/desc1.png",
@@ -16,7 +16,7 @@ const Gallery = () => {
     ),
     new Artwork(
       "/soluna",
-      "Image 2",
+      "SOLUNA",
       "Desc 2",
       "/thumbnails/tn2.png",
       "/descs/desc2.png",
@@ -24,7 +24,7 @@ const Gallery = () => {
     ),
     new Artwork(
       "/kisuitechflyer",
-      "Image 3",
+      "KISUI TECH FLYER",
       "Desc 3",
       "/thumbnails/tn3.png",
       "/descs/desc3.png",
@@ -32,7 +32,7 @@ const Gallery = () => {
     ),
     new Artwork(
       "/akm30",
-      "Image 4",
+      "AKM 30",
       "Desc 4",
       "/thumbnails/tn4.png",
       "/descs/desc4.png",
@@ -40,7 +40,7 @@ const Gallery = () => {
     ),
     new Artwork(
       "/musictheorycat",
-      "Image 5",
+      "MUSIC THEORY CAT",
       "Desc 5",
       "/thumbnails/tn5.png",
       "/descs/desc5.png",
@@ -48,7 +48,7 @@ const Gallery = () => {
     ),
     new Artwork(
       "/designheros",
-      "Image 6",
+      "DESIGN HEROS",
       "Desc 6",
       "/thumbnails/tn6.png",
       "/descs/desc6.png",
@@ -56,7 +56,7 @@ const Gallery = () => {
     ),
     new Artwork(
       "/fetzandottoswimwear",
-      "Image 7",
+      "FETZ AND OTTO SWIM WEAR",
       "Desc 7",
       "/thumbnails/tn7.png",
       "/descs/desc7.png",
@@ -64,7 +64,7 @@ const Gallery = () => {
     ),
     new Artwork(
       "/therabbithole",
-      "Image 8",
+      "THE RABBIT HOLE",
       "Desc 8",
       "/thumbnails/tn8.png",
       "/descs/desc8.png",
@@ -72,7 +72,7 @@ const Gallery = () => {
     ),
     new Artwork(
       "/fetzandottodaycare",
-      "Image 9",
+      "FETZ AND OTTO DAYCARE",
       "Desc 9",
       "/thumbnails/tn9.png",
       "/descs/desc9.png",
@@ -80,7 +80,7 @@ const Gallery = () => {
     ),
     new Artwork(
       "/sweetsketch",
-      "Image 10",
+      "SWEET SKETCH",
       "Desc 10",
       "/thumbnails/tn10.png",
       "/descs/desc10.png",
@@ -88,7 +88,7 @@ const Gallery = () => {
     ),
     new Artwork(
       "/izumiyasuda",
-      "Image 11",
+      "IZUMI YASUDA",
       "Desc 11",
       "/thumbnails/tn11.png",
       "/descs/desc11.png",
