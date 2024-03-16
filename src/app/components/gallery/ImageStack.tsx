@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import Image from 'next/image';
+import Image from "next/image";
 import Link from 'next/link';
 import Artwork from "../models/Artwork";
 
@@ -31,35 +31,37 @@ const ImageStack = (props: ImageStackProps) => {
         >
         <Link href = {props.artwork.key}>
         <Image
-        style={{
-            transition: 'opacity 0.5s ease-in-out',
-            opacity: isHovered ? 0: 1,
-            position: 'absolute',
-            objectFit: 'contain',
-            left: 0,
-            top:0 
-        }}
-        className = "shadow-xl"
-          src={props.artwork.thumbnail}
-          alt={props.artwork.alt}
-          width={props.artwork.width}
-          height={props.artwork.width}
-        />
+            className = "shadow-xl"
+            src={props.artwork.thumbnail}
+            alt={props.artwork.alt}
+            width={props.artwork.width}
+            height={props.artwork.width}
+            style={{
+                transition: 'opacity 0.5s ease-in-out',
+                opacity: isHovered ? 0: 1,
+                position: 'absolute',
+                objectFit: 'contain',
+                left: 0,
+                top:0,
+                maxWidth: "100%",
+                height: "auto"
+            }} />
         <Image
-        style={{
-            transition: 'opacity 0.5s ease-in-out',
-            opacity: isHovered? 1:0,
-            position: 'absolute',
-            objectFit: 'contain',
-            left: 0,
-            top:0
-        }}
-        className = "shadow-xl"
-          src={props.artwork.desc}
-          alt={props.artwork.descAlt}
-          width={props.artwork.width}
-          height={props.artwork.width}
-        />
+            className = "shadow-xl"
+            src={props.artwork.desc}
+            alt={props.artwork.descAlt}
+            width={props.artwork.width}
+            height={props.artwork.width}
+            style={{
+                transition: 'opacity 0.5s ease-in-out',
+                opacity: isHovered? 1:0,
+                position: 'absolute',
+                objectFit: 'contain',
+                left: 0,
+                top:0,
+                maxWidth: "100%",
+                height: "auto"
+            }} />
         </Link>
         </div>
     );

@@ -1,26 +1,17 @@
 "use client";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 const Logo = () => {
-  //update the size of the logo when the size of the screen changes
-  const [width, setWidth] = useState(0);
-
-  const updateWidth = () => {
-    const newWidth = window.innerWidth;
-    setWidth(newWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateWidth);
-    updateWidth();
-  }, []);
-
   return (
-    <div className="flex flex-shrink-0 items-center">
+    <div className="flex flex-shrink-0 items-center px-6 pt-4">
       <Link href="/">
-        <Image src="/Logo.png" alt="Logo" width={153} height={81}/>
+          <Image
+            src="/Logo.png"
+            alt="Logo"
+            width="150"
+            height="75"
+          />
       </Link>
     </div>
   );

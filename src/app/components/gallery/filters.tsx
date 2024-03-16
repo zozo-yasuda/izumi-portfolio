@@ -31,7 +31,7 @@ const Filters = ({
           {filter}
         </div>
         {activeFilter === filter && (
-          <div className="absolute bottom-1 left-auto right-auto w-full h-2 sm:h-1 bg-rose z-0 mx-"></div>
+          <div className="absolute bottom-1 left-auto right-auto w-full h-2 sm:h-1 bg-rose z-0"></div>
         )}
       </span>
     </li>

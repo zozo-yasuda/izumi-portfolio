@@ -64,17 +64,14 @@ const Navbar = () => {
           </div>
         </>
       ) : (
-        <div className="relative flex flex-1 items-center justify-between mx-auto pl-12 pt-6 pb-2">
-          <Logo />
-          <div
-            className=" text-lime-900 text-base font-sans uppercase items-center justify-between w-full md:flex md:w-auto md:order-1"
-            id="navbar-sticky"
-          >
-            <ul className="flex flex-col md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-              {menuItems}
-            </ul>
+        <>
+          <div className="flex justify-between items-center">
+            <Logo />
+            <div className="">
+              <ul className="text-md mr-4 flex justify-end space-x-4">{menuItems}</ul>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </nav>
   );
