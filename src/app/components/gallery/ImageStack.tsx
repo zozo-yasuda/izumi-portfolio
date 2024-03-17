@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
-import Image from "next/image";
 import Link from 'next/link';
 import Artwork from "../models/Artwork";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 type ImageStackProps = {
     artwork: Artwork;
@@ -10,15 +10,7 @@ type ImageStackProps = {
 const ImageStack = (props: ImageStackProps) => {
     
     const [isHovered, setIsHovered] = useState(false);
-    const [imgLoaded, setImgLoaded] = useState(false);
 
-    useEffect(() => {
-        const img = document.createElement('img');
-        img.src = props.artwork.thumbnail;
-        img.width = 249;
-        img.height = 249;
-        img.onload = () => setImgLoaded(true);
-    }, [props.artwork.thumbnail]);
 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -41,20 +33,16 @@ return (
             height: props.artwork.height,
             width: props.artwork.width}}
         >
-            <p>Loading...</p>
-
-    { imgLoaded &&
-    <>
         <div className="absolute bg-rose w-full h-full left-0 top-0 shadow-xl
-                        transition-opacity duration-500 ease-in" 
-                        style={{ opacity: isHovered ? 1 : 0 }}>
-            <h1 className="text-5xl font-tomarik text-left text-lime pl-4 pt-4">{props.artwork.alt}</h1>
-            <p className="flex flex-col">
-                {tagsList}
-            </p>
-        </div>
+                                transition-opacity duration-500 ease-in" 
+                                style={{ opacity: isHovered ? 1 : 0}}>
+                    <h1 className="text-5xl font-tomarik text-left text-lime pl-4 pt-4">{props.artwork.alt}</h1>
+                    <p className="flex flex-col">
+                        {tagsList}
+                    </p>
+                </div>
         <Link href = {props.artwork.key}>
-        <Image
+        <LazyLoadImage
         className="shadow-xl"
             src={props.artwork.thumbnail}
             alt={props.artwork.alt}
@@ -69,8 +57,6 @@ return (
                 top:0,
             }} />
         </Link>
-        </>  
-    }
     </div>
     );
 };
