@@ -12,7 +12,7 @@ const Gallery = () => {
       "Desc 1",
       "/thumbnails/tn1.png",
       "/descs/desc1.png",
-      ["print"]
+      ["graphic design"]
     ),
     new Artwork(
       "/soluna",
@@ -20,7 +20,7 @@ const Gallery = () => {
       "Desc 2",
       "/thumbnails/tn2.png",
       "/descs/desc2.png",
-      ["branding"]
+      ["graphic design"]
     ),
     new Artwork(
       "/kisuitechflyer",
@@ -28,7 +28,7 @@ const Gallery = () => {
       "Desc 3",
       "/thumbnails/tn3.png",
       "/descs/desc3.png",
-      ["print", "marketing"]
+      ["graphic design"]
     ),
     new Artwork(
       "/akm30",
@@ -36,7 +36,7 @@ const Gallery = () => {
       "Desc 4",
       "/thumbnails/tn4.png",
       "/descs/desc4.png",
-      ["marketing"]
+      ["graphic design"]
     ),
     new Artwork(
       "/musictheorycat",
@@ -44,7 +44,7 @@ const Gallery = () => {
       "Desc 5",
       "/thumbnails/tn5.png",
       "/descs/desc5.png",
-      ["illustration"]
+      ["graphic design"]
     ),
     new Artwork(
       "/designheros",
@@ -52,7 +52,7 @@ const Gallery = () => {
       "Desc 6",
       "/thumbnails/tn6.png",
       "/descs/desc6.png",
-      ["motion", "marketing"]
+      ["graphic design"]
     ),
     new Artwork(
       "/fetzandottoswimwear",
@@ -60,7 +60,7 @@ const Gallery = () => {
       "Desc 7",
       "/thumbnails/tn7.png",
       "/descs/desc7.png",
-      ["branding"]
+      ["graphic design"]
     ),
     new Artwork(
       "/therabbithole",
@@ -68,7 +68,7 @@ const Gallery = () => {
       "Desc 8",
       "/thumbnails/tn8.png",
       "/descs/desc8.png",
-      ["branding", "print", "motion"]
+      ["graphic design"]
     ),
     new Artwork(
       "/fetzandottodaycare",
@@ -76,7 +76,7 @@ const Gallery = () => {
       "Desc 9",
       "/thumbnails/tn9.png",
       "/descs/desc9.png",
-      ["branding"]
+      ["graphic design"]
     ),
     new Artwork(
       "/sweetsketch",
@@ -84,7 +84,7 @@ const Gallery = () => {
       "Desc 10",
       "/thumbnails/tn10.png",
       "/descs/desc10.png",
-      ["branding", "motion"]
+      ["graphic design"]
     ),
     new Artwork(
       "/izumiyasuda",
@@ -92,7 +92,7 @@ const Gallery = () => {
       "Desc 11",
       "/thumbnails/tn11.png",
       "/descs/desc11.png",
-      ["branding", "print"]
+      ["graphic design"]
     ),
   ];
 

@@ -9,7 +9,7 @@ export default function Page() {
         "Make 2 magazine spreads for a section called local stories on a fictional town in North Florida")}
       <div className="h-screen w-full">
         <object
-          data="/fauxflorida/ff1.pdf"
+          data="/PDFs/clv.pdf"
           type="application/pdf"
           width='100%'
           height='100%' 

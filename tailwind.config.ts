@@ -26,12 +26,13 @@ const config: Config = {
         'tomarik': ['tomarik-introvert', 'sans-serif'],
       },
       colors: {
-        green: "#27611D",
+        green: "#2A6230",
         lime: "#509944",
-        offwhite: "#FBF7F7",
-        rose: "#FCE3E6",
-        pink: "#F6AEB6",
+        offwhite: "#FDFAFA",
+        rose: "#FCE3E5",
+        pink: "#F6AFB6",
         offblack: "#2C2D43",
+        red: "#EE5365"
       },
       leading: {
         extraloose: "32",

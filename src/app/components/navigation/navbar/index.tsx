@@ -41,7 +41,7 @@ const Navbar = () => {
           onClick={() => handleClick(path)}
           className="relative inline-block cursor-pointer"
         >
-            <Link href={path} className="relative z-10 block text-green font-sans uppercase tracking-18">
+            <Link href={path} className="relative z-10 block text-offblack font-sans uppercase tracking-18">
                 {label}
             </Link>
           {activeLink === path && (
