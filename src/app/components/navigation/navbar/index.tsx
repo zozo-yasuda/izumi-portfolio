@@ -41,12 +41,20 @@ const Navbar = () => {
           onClick={() => handleClick(path)}
           className="relative inline-block cursor-pointer"
         >
+          {activeLink === path? 
+          (
+            <Link href={path} className="relative z-10 block text-red font-sans uppercase tracking-18">
+                {label}
+            </Link>
+          ) : (
             <Link href={path} className="relative z-10 block text-offblack font-sans uppercase tracking-18">
                 {label}
             </Link>
-          {activeLink === path && (
+          )
+          } 
+          {/*activeLink === path && (
             <div className="absolute bottom-1 left-auto right-auto w-full h-1 bg-rose z-0"></div>
-          )}
+          )*/}
         </span>
       </li>
     );
