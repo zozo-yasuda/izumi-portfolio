@@ -103,7 +103,7 @@ export const FETZ_OTTO_DAYCARE = new Artwork(
   "FETZ OTTO DAYCARE",
   "Project",
   "/thumbnails/tn9.png",
-  [TAG.GRAPHIC_DESIGN],
+  [],
   ""
 );
 export const SWEET_SKETCH = new Artwork(
@@ -111,7 +111,7 @@ export const SWEET_SKETCH = new Artwork(
   "SWEET SKETCH",
   "Project",
   "/thumbnails/tn10.png",
-  [TAG.GRAPHIC_DESIGN],
+  [],
   ""
 );
 export const IZUMI_YASUDA = new Artwork(
@@ -119,6 +119,6 @@ export const IZUMI_YASUDA = new Artwork(
   "IZUMI YASUDA",
   "Project",
   "/thumbnails/tn11.png",
-  [TAG.GRAPHIC_DESIGN],
+  [],
   ""
 );
