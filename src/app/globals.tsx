@@ -30,7 +30,7 @@ export const FAUX_FLORIDA = new Artwork(
 );
 
 export const DOTNDONE = new Artwork(
-  "/example",
+  "/dotndone",
   "Dot & Done",
   "Organizational Kit",
   "/thumbnails/thumbnail-07.png",
