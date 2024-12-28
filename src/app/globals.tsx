@@ -35,7 +35,18 @@ export const DOTNDONE = new Artwork(
   "Organizational Kit",
   "/thumbnails/thumbnail-07.png",
   [TAG.INTERACTION, TAG.PRINT, TAG.BRANDING],
-  "/pdfs/DotnDone.pdf"
+  "/pdfs/DotnDone.pdf",
+  (
+    <p>
+      Dot & Done is a task management tool designed for individuals with ADHD.
+      It features a sticky note pad with perforated dots that users punch out
+      after completing tasks, which can be collected in a bottle as a reward.
+      Over 12 days, the sticky notes reveal a pixel art picture when placed on a
+      wall, turning organization into a fun and visually satisfying experience.
+      By combining functionality with gamification, Dot and Done encourages
+      consistency without the pressure of a traditional calendar.
+    </p>
+  )
 );
 
 export const SOLUNA = new Artwork(
