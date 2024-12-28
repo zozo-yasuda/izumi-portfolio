@@ -5,6 +5,7 @@ export enum TAG {
   GRAPHIC_DESIGN = "graphic design",
   ILLUSTRATIONS = "illustrations",
   MISC = "misc",
+  BRANDING = "branding",
 }
 
 /**
@@ -24,7 +25,7 @@ export const SOLUNA = new Artwork(
   "SOLUNA",
   "Project",
   "/thumbnails/tn2.png",
-  [TAG.GRAPHIC_DESIGN],
+  [TAG.GRAPHIC_DESIGN, TAG.BRANDING],
   ""
 );
 
