@@ -2,10 +2,12 @@ import Artwork from "../app/components/models/Artwork";
 
 export enum TAG {
   ALL = "all",
-  GRAPHIC_DESIGN = "graphic design",
-  ILLUSTRATIONS = "illustrations",
-  MISC = "misc",
+  ILLUSTRATION = "illustration",
   BRANDING = "branding",
+  INTERACTION = "interaction design",
+  MOTION = "motion design",
+  PRINT = "print design",
+  PLAY = "play",
 }
 
 /**
@@ -16,8 +18,8 @@ export const FAUX_FLORIDA = new Artwork(
   "FAUX FLORIDA",
   "Project",
   "/thumbnails/tn1.png",
-  [TAG.GRAPHIC_DESIGN],
-  " ahftd"
+  [TAG.PRINT],
+  ""
 );
 
 export const SOLUNA = new Artwork(
@@ -25,7 +27,7 @@ export const SOLUNA = new Artwork(
   "SOLUNA",
   "Project",
   "/thumbnails/tn2.png",
-  [TAG.GRAPHIC_DESIGN, TAG.BRANDING],
+  [TAG.BRANDING],
   ""
 );
 
@@ -34,7 +36,7 @@ export const KISUI_TECH_FLYER = new Artwork(
   "KISUI TECH FLYER",
   "Project",
   "/thumbnails/tn3.png",
-  [TAG.GRAPHIC_DESIGN],
+  [TAG.PRINT],
   ""
 );
 export const AKM_30 = new Artwork(
@@ -42,7 +44,7 @@ export const AKM_30 = new Artwork(
   "AKM 30",
   "Project",
   "/thumbnails/tn4.png",
-  [TAG.GRAPHIC_DESIGN],
+  [TAG.PRINT, TAG.BRANDING],
   ""
 );
 export const MUSIC_THEORY_CAT = new Artwork(
@@ -50,7 +52,7 @@ export const MUSIC_THEORY_CAT = new Artwork(
   "MUSIC THEORY CAT",
   "Project",
   "/thumbnails/tn5.png",
-  [TAG.GRAPHIC_DESIGN],
+  [TAG.ILLUSTRATION],
   ""
 );
 export const DESIGN_HEROS = new Artwork(
@@ -58,7 +60,7 @@ export const DESIGN_HEROS = new Artwork(
   "DESIGN HEROS",
   "Project",
   "/thumbnails/tn6.png",
-  [TAG.GRAPHIC_DESIGN],
+  [TAG.MOTION],
   ""
 );
 export const FETZ_OTTO_SWIMWEAR = new Artwork(
@@ -66,7 +68,7 @@ export const FETZ_OTTO_SWIMWEAR = new Artwork(
   "FETZ OTTO",
   "Swimwear",
   "/thumbnails/tn7.png",
-  [TAG.GRAPHIC_DESIGN],
+  [TAG.BRANDING],
   "/pdfs/FetzOtto (1).pdf",
   (
     <p>
@@ -86,7 +88,7 @@ export const THE_RABBIT_HOLE = new Artwork(
   "THE RABBIT HOLE",
   "Project",
   "/thumbnails/tn8.png",
-  [TAG.GRAPHIC_DESIGN],
+  [TAG.MOTION, TAG.BRANDING, TAG.PRINT],
   "/pdfs/FetzOtto (1).pdf"
 );
 export const FETZ_OTTO_DAYCARE = new Artwork(
