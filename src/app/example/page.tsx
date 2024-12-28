@@ -1,8 +1,8 @@
 "use client";
 import Sidebar from "../components/artsidebar";
 import PDFPage from "../components/portfolioPages/pdfPage";
-import { EXAMPLE } from "../globals";
+import { DOTNDONE } from "../globals";
 
-export default function ExamplePage() {
-  return PDFPage(Sidebar(EXAMPLE), EXAMPLE.pdf);
+export default function DotndonePage() {
+  return PDFPage(Sidebar(DOTNDONE), DOTNDONE.pdf);
 }
