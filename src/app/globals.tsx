@@ -29,12 +29,12 @@ export const FAUX_FLORIDA = new Artwork(
   ""
 );
 
-export const EXAMPLE = new Artwork(
-  "/example",
-  "FAUX FLORIDA",
-  "Project",
+export const DOTNDONE = new Artwork(
+  "/dotndone",
+  "Dot & Done",
+  "Organizational Kit",
   "/thumbnails/thumbnail-07.png",
-  [TAG.PRINT, TAG.BRANDING],
+  [TAG.INTERACTION, TAG.PRINT, TAG.BRANDING],
   "/pdfs/DotnDone.pdf"
 );
 
