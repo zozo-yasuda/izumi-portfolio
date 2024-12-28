@@ -1,24 +1,42 @@
+import React, { ReactElement } from "react";
 
+/**
+ * key
+ * title
+ * subtitle
+ * thumbnail
+ * tags
+ * pdf
+ * text
+ */
 export class Artwork {
   key: string;
-  alt: string;
-  descAlt: string;
+  title: string;
+  subtitle: string;
   thumbnail: string;
-  desc: string;
   tags: Set<String>;
+  pdf: string;
+  text: ReactElement;
   width: number = 249;
   height: number = 249;
 
-  constructor(key: string, alt: string, descAlt: string, thumbnail: string, desc: string, tags: String[]=[]) {
+  constructor(
+    key: string,
+    title: string,
+    subtitle: string,
+    thumbnail: string,
+    tags: String[] = [],
+    pdf: string,
+    text: ReactElement = <></>
+  ) {
     this.key = key;
-    this.alt = alt;
-    this.descAlt = descAlt;
+    this.title = title;
+    this.subtitle = subtitle;
     this.thumbnail = thumbnail;
-    this.desc = desc;
     this.tags = new Set(tags);
+    this.pdf = pdf;
+    this.text = text;
   }
-
 }
-
 
 export default Artwork;

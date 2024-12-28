@@ -3,6 +3,7 @@ import Filters from "./filters";
 import Artwork from "../models/Artwork";
 import ImageStack from "./ImageStack";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { TAG } from "@/app/globals";
 
 const Gallery = () => {
   const artworks: Array<Artwork> = [
@@ -12,7 +13,7 @@ const Gallery = () => {
       "Desc 1",
       "/thumbnails/tn1.png",
       "/descs/desc1.png",
-      ["graphic design"]
+      [TAG.GRAPHIC_DESIGN]
     ),
     new Artwork(
       "/soluna",
@@ -20,7 +21,7 @@ const Gallery = () => {
       "Desc 2",
       "/thumbnails/tn2.png",
       "/descs/desc2.png",
-      ["graphic design"]
+      [TAG.GRAPHIC_DESIGN]
     ),
     new Artwork(
       "/kisuitechflyer",
@@ -28,7 +29,7 @@ const Gallery = () => {
       "Desc 3",
       "/thumbnails/tn3.png",
       "/descs/desc3.png",
-      ["graphic design"]
+      [TAG.GRAPHIC_DESIGN]
     ),
     new Artwork(
       "/akm30",
@@ -36,7 +37,7 @@ const Gallery = () => {
       "Desc 4",
       "/thumbnails/tn4.png",
       "/descs/desc4.png",
-      ["graphic design"]
+      [TAG.GRAPHIC_DESIGN]
     ),
     new Artwork(
       "/musictheorycat",
@@ -44,7 +45,7 @@ const Gallery = () => {
       "Desc 5",
       "/thumbnails/tn5.png",
       "/descs/desc5.png",
-      ["graphic design"]
+      [TAG.GRAPHIC_DESIGN]
     ),
     new Artwork(
       "/designheros",
@@ -52,15 +53,15 @@ const Gallery = () => {
       "Desc 6",
       "/thumbnails/tn6.png",
       "/descs/desc6.png",
-      ["graphic design"]
+      [TAG.GRAPHIC_DESIGN]
     ),
     new Artwork(
-      "/fetzandottoswimwear",
-      "FETZ AND OTTO SWIM WEAR",
+      "/fetzottoswimwear",
+      "FETZ OTTO SWIM WEAR",
       "Desc 7",
       "/thumbnails/tn7.png",
       "/descs/desc7.png",
-      ["graphic design"]
+      [TAG.GRAPHIC_DESIGN]
     ),
     new Artwork(
       "/therabbithole",
@@ -68,15 +69,15 @@ const Gallery = () => {
       "Desc 8",
       "/thumbnails/tn8.png",
       "/descs/desc8.png",
-      ["graphic design"]
+      [TAG.GRAPHIC_DESIGN]
     ),
     new Artwork(
-      "/fetzandottodaycare",
-      "FETZ AND OTTO DAYCARE",
+      "/fetzottodaycare",
+      "FETZ OTTO DAYCARE",
       "Desc 9",
       "/thumbnails/tn9.png",
       "/descs/desc9.png",
-      ["graphic design"]
+      [TAG.GRAPHIC_DESIGN]
     ),
     new Artwork(
       "/sweetsketch",
@@ -84,7 +85,7 @@ const Gallery = () => {
       "Desc 10",
       "/thumbnails/tn10.png",
       "/descs/desc10.png",
-      ["graphic design"]
+      [TAG.GRAPHIC_DESIGN]
     ),
     new Artwork(
       "/izumiyasuda",
@@ -92,7 +93,7 @@ const Gallery = () => {
       "Desc 11",
       "/thumbnails/tn11.png",
       "/descs/desc11.png",
-      ["graphic design"]
+      [TAG.GRAPHIC_DESIGN]
     ),
   ];
 
@@ -101,7 +102,7 @@ const Gallery = () => {
   const [currFilter, setFilter] = useState("all");
 
   const handleFilterChange = (filter: string) => {
-    if(filter !== currFilter){
+    if (filter !== currFilter) {
       setFilterChanged(true);
       setFilter(filter);
       if (filter === "all") {
@@ -111,12 +112,10 @@ const Gallery = () => {
           artworks.filter((artwork) => artwork.tags.has(filter))
         );
       }
-  }
-    else{
+    } else {
       setFilterChanged(false);
     }
   };
-    
 
   const [displayedArtworks, setDisplayedArtworks] = useState<Artwork[]>([]);
 
