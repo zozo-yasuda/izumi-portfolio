@@ -18,6 +18,7 @@ const Gallery = () => {
     ART.MUSIC_THEORY_CAT,
     ART.SOLUNA,
     ART.SWEET_SKETCH,
+    ART.EXAMPLE
   ];
 
   const [filteredArtworks, setFilteredArtworks] = useState(artworks);
