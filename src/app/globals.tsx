@@ -33,7 +33,7 @@ export const EXAMPLE = new Artwork(
   "/example",
   "FAUX FLORIDA",
   "Project",
-  "/thumbnails/tn1.png",
+  "/thumbnails/thumbnail-07.png",
   [TAG.PRINT, TAG.BRANDING],
   "/pdfs/DotnDone.pdf"
 );
