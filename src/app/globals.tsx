@@ -31,7 +31,7 @@ export const FAUX_FLORIDA = new Artwork(
 
 export const DOTNDONE = new Artwork(
   "/dotndone",
-  "Dot & Done",
+  "DOT & DONE",
   "Organizational Kit",
   "/thumbnails/thumbnail-07.png",
   [TAG.INTERACTION, TAG.PRINT, TAG.BRANDING],
