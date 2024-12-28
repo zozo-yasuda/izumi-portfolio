@@ -16,7 +16,7 @@ export const FAUX_FLORIDA = new Artwork(
   "Project",
   "/thumbnails/tn1.png",
   [TAG.GRAPHIC_DESIGN],
-  ""
+  " ahftd"
 );
 
 export const SOLUNA = new Artwork(
