@@ -35,7 +35,7 @@ export const EXAMPLE = new Artwork(
   "Project",
   "/thumbnails/tn1.png",
   [TAG.PRINT, TAG.BRANDING],
-  ""
+  "/pdfs/DotnDone.pdf"
 );
 
 export const SOLUNA = new Artwork(
