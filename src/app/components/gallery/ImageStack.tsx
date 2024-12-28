@@ -44,7 +44,7 @@ const ImageStack = (props: ImageStackProps) => {
         style={{ opacity: isHovered ? 1 : 0 }}
       >
         <h1 className="text-5xl font-tomarik text-left text-lime pl-4 pt-4">
-          {props.artwork.alt}
+          {props.artwork.title}
         </h1>
         <p className="flex flex-col">{tagsList}</p>
       </div>
@@ -52,7 +52,7 @@ const ImageStack = (props: ImageStackProps) => {
         <LazyLoadImage
           className="shadow-xl"
           src={props.artwork.thumbnail}
-          alt={props.artwork.alt}
+          alt={props.artwork.title}
           width={props.artwork.width}
           height={props.artwork.width}
           style={{
