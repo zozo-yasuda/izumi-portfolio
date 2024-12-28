@@ -1,3 +1,19 @@
+For Izumi:
+
+- To add a new project, change these:
+    - src/app/globals.tsx
+    - src/app/components/gallery/index.tsx
+    - add a new folder in the src/app folder that has the name of the project url (e.g. /src/app/example/page.tsx) and create a file called page.tsx. Copy and change.
+- To make changes within github.com, click on the edit icon and then commit changes.
+
+- To interact with your changes on your local computer, go to C:/izumi/Documents/izumi-portfolio
+  - run `git fetch`
+  - run `npm run dev`
+  - go to localhost:3000 or whatever address the terminal tells you on your browser
+  - website should show up.
+
+- Alternatively, go to `https://vercel.com/zozos-projects-6542607c/izumi-portfolio` and look for deployment status. It might be errored out. 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
