@@ -12,6 +12,13 @@ export enum TAG {
 
 /**
  * key is the path for the specific page
+ * URL
+ * title
+ * subtitle
+ * thumbnail image path
+ * tags
+ * pdf
+ * text (JSX format)
  */
 export const FAUX_FLORIDA = new Artwork(
   "/fauxflorida",

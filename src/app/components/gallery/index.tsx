@@ -4,97 +4,20 @@ import Artwork from "../models/Artwork";
 import ImageStack from "./ImageStack";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { TAG } from "@/app/globals";
+import * as ART from "@/app/globals";
 
 const Gallery = () => {
   const artworks: Array<Artwork> = [
-    new Artwork(
-      "/fauxflorida",
-      "FAUX FLORIDA",
-      "Desc 1",
-      "/thumbnails/tn1.png",
-      "/descs/desc1.png",
-      [TAG.GRAPHIC_DESIGN]
-    ),
-    new Artwork(
-      "/soluna",
-      "SOLUNA",
-      "Desc 2",
-      "/thumbnails/tn2.png",
-      "/descs/desc2.png",
-      [TAG.GRAPHIC_DESIGN]
-    ),
-    new Artwork(
-      "/kisuitechflyer",
-      "KISUI TECH FLYER",
-      "Desc 3",
-      "/thumbnails/tn3.png",
-      "/descs/desc3.png",
-      [TAG.GRAPHIC_DESIGN]
-    ),
-    new Artwork(
-      "/akm30",
-      "AKM 30",
-      "Desc 4",
-      "/thumbnails/tn4.png",
-      "/descs/desc4.png",
-      [TAG.GRAPHIC_DESIGN]
-    ),
-    new Artwork(
-      "/musictheorycat",
-      "MUSIC THEORY CAT",
-      "Desc 5",
-      "/thumbnails/tn5.png",
-      "/descs/desc5.png",
-      [TAG.GRAPHIC_DESIGN]
-    ),
-    new Artwork(
-      "/designheros",
-      "DESIGN HEROS",
-      "Desc 6",
-      "/thumbnails/tn6.png",
-      "/descs/desc6.png",
-      [TAG.GRAPHIC_DESIGN]
-    ),
-    new Artwork(
-      "/fetzottoswimwear",
-      "FETZ OTTO SWIM WEAR",
-      "Desc 7",
-      "/thumbnails/tn7.png",
-      "/descs/desc7.png",
-      [TAG.GRAPHIC_DESIGN]
-    ),
-    new Artwork(
-      "/therabbithole",
-      "THE RABBIT HOLE",
-      "Desc 8",
-      "/thumbnails/tn8.png",
-      "/descs/desc8.png",
-      [TAG.GRAPHIC_DESIGN]
-    ),
-    new Artwork(
-      "/fetzottodaycare",
-      "FETZ OTTO DAYCARE",
-      "Desc 9",
-      "/thumbnails/tn9.png",
-      "/descs/desc9.png",
-      [TAG.GRAPHIC_DESIGN]
-    ),
-    new Artwork(
-      "/sweetsketch",
-      "SWEET SKETCH",
-      "Desc 10",
-      "/thumbnails/tn10.png",
-      "/descs/desc10.png",
-      [TAG.GRAPHIC_DESIGN]
-    ),
-    new Artwork(
-      "/izumiyasuda",
-      "IZUMI YASUDA",
-      "Desc 11",
-      "/thumbnails/tn11.png",
-      "/descs/desc11.png",
-      [TAG.GRAPHIC_DESIGN]
-    ),
+    ART.AKM_30,
+    ART.DESIGN_HEROS,
+    ART.FAUX_FLORIDA,
+    ART.FETZ_OTTO_DAYCARE,
+    ART.FETZ_OTTO_SWIMWEAR,
+    ART.IZUMI_YASUDA,
+    ART.KISUI_TECH_FLYER,
+    ART.MUSIC_THEORY_CAT,
+    ART.SOLUNA,
+    ART.SWEET_SKETCH,
   ];
 
   const [filteredArtworks, setFilteredArtworks] = useState(artworks);
