@@ -105,7 +105,7 @@ export const FETZ_OTTO_SWIMWEAR = new Artwork(
       <br />
       This project focused on creating a cohesive identity with a wave inspired
       logo, elegant typography, and a refined color palette, as well as
-      Instagram post mockups and business cards, capturing the brand's vibrant
+      Instagram post mockups and business cards, capturing the brand&apos;s vibrant
       yet sophisticated essence.
     </p>
   )
