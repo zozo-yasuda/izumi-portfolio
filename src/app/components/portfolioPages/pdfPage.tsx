@@ -40,7 +40,7 @@ const PDFPage: React.FC<PDFPageProps> = ({ sidebar, fileName, artwork }) => {
       <SidebarComponent artwork={artwork} />
       <div className="h-screen w-full">
         <Document file={fileName}>
-          <Page pageNumber={1} />
+          <Page pageNumber={1} renderAnnotationLayer={false} renderTextLayer={false} />
         </Document>
       </div>
     </section>
