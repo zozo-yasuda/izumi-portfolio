@@ -40,7 +40,7 @@ const ImageStack = forwardRef<HTMLDivElement, ImageStackProps>((props, ref) => {
       ref={ref} 
     >
       <div
-        className="absolute bg-rose w-full h-full left-0 top-0 shadow-xl
+        className="absolute bg-rose w-full h-full left-0 top-0
                                           transition-opacity duration-500 ease-in"
         style={{ opacity: isHovered ? 1 : 0 }}
       >
@@ -51,7 +51,6 @@ const ImageStack = forwardRef<HTMLDivElement, ImageStackProps>((props, ref) => {
       </div>
       <Link href={props.artwork.key}>
         <LazyLoadImage
-          className="shadow-xl"
           src={props.artwork.thumbnail}
           alt={props.artwork.title}
           width={props.artwork.width}
