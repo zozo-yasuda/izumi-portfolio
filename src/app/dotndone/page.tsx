@@ -8,7 +8,7 @@ export default function DotndonePage() {
     <PDFPage
       sidebar={Sidebar}
       artwork={DOTNDONE}
-      fileName={DOTNDONE.pdf}
+      fileName={"/pdfs/DotNDone.pdf"}
     />
   )
 }
