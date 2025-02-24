@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Filters from "./filters";
 import Artwork from "../models/Artwork";
 import ImageStack from "./ImageStack";
@@ -18,7 +18,7 @@ const Gallery = () => {
     ART.MUSIC_THEORY_CAT,
     ART.SOLUNA,
     ART.SWEET_SKETCH,
-    ART.DOTNDONE
+    ART.DOTNDONE,
   ];
 
   const [filteredArtworks, setFilteredArtworks] = useState(artworks);
@@ -32,9 +32,7 @@ const Gallery = () => {
       if (filter === "all") {
         setFilteredArtworks(artworks);
       } else {
-        setFilteredArtworks(
-          artworks.filter((artwork) => artwork.tags.has(filter))
-        );
+        setFilteredArtworks(artworks.filter((artwork) => artwork.tags.has(filter)));
       }
     } else {
       setFilterChanged(false);
@@ -53,22 +51,28 @@ const Gallery = () => {
     };
   }, [filteredArtworks]);
 
+  const nodeRef = useRef(null);
+
   return (
     <div className="pb-6 sm:p-6 px-4 min-h-screen">
       <div className="flex flex-col sm:flex-row">
         <Filters onFilterChange={handleFilterChange} />
         <TransitionGroup className="mx-auto grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {displayedArtworks.map((artwork: Artwork) => (
-            <CSSTransition
-              key={artwork.key}
-              timeout={500}
-              classNames="item"
-              appear={filterChanged}
-              enter={filterChanged}
-            >
-              <ImageStack artwork={artwork} />
-            </CSSTransition>
-          ))}
+          {displayedArtworks.map((artwork: Artwork, index) => {
+            
+            return (
+              <CSSTransition
+                key={artwork.key}
+                timeout={500}
+                classNames="item"
+                appear={filterChanged}
+                enter={filterChanged}
+                nodeRef={nodeRef}
+              >
+                <ImageStack artwork={artwork} ref={nodeRef} />
+              </CSSTransition>
+            );
+          })}
         </TransitionGroup>
       </div>
     </div>

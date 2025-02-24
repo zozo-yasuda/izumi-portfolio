@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import Link from "next/link";
 import Artwork from "../models/Artwork";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -7,7 +7,7 @@ type ImageStackProps = {
   artwork: Artwork;
 };
 
-const ImageStack = (props: ImageStackProps) => {
+const ImageStack = forwardRef<HTMLDivElement, ImageStackProps>((props, ref) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -37,10 +37,11 @@ const ImageStack = (props: ImageStackProps) => {
         height: props.artwork.height,
         width: props.artwork.width,
       }}
+      ref={ref} 
     >
       <div
         className="absolute bg-rose w-full h-full left-0 top-0 shadow-xl
-                                transition-opacity duration-500 ease-in"
+                                          transition-opacity duration-500 ease-in"
         style={{ opacity: isHovered ? 1 : 0 }}
       >
         <h1 className="text-5xl font-tomarik text-left text-lime pl-4 pt-4">
@@ -67,6 +68,8 @@ const ImageStack = (props: ImageStackProps) => {
       </Link>
     </div>
   );
-};
+});
+
+ImageStack.displayName = "ImageStack";
 
 export default ImageStack;
