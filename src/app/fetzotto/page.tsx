@@ -4,5 +4,11 @@ import PDFPage from "../components/portfolioPages/pdfPage";
 import { FETZ_OTTO_SWIMWEAR } from "../globals";
 
 export default function FetzOttoSwimWearPage() {
-  return PDFPage(Sidebar(FETZ_OTTO_SWIMWEAR), FETZ_OTTO_SWIMWEAR.pdf);
+  return (
+    <PDFPage
+      sidebar={Sidebar}
+      artwork={FETZ_OTTO_SWIMWEAR}
+      fileName={FETZ_OTTO_SWIMWEAR.pdf}
+    />
+  )
 }

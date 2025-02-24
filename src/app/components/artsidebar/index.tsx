@@ -2,7 +2,11 @@ import { TAG } from "@/app/globals";
 import Link from "next/link";
 import Artwork from "../models/Artwork";
 
-const Sidebar = (artwork: Artwork) => {
+interface SideBarProps {
+  artwork : Artwork
+}
+
+const Sidebar:React.FC<SideBarProps> = ({artwork}) => {
   return (
     <aside className="min-h-full w-screen h-[200px] sm:h-[400px] sm:w-[350px] bg-offwhite flex flex-col justify-between">
       <div className="sm:pt-6"></div>
