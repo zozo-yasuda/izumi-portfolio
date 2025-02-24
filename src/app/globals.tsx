@@ -91,7 +91,7 @@ export const DESIGN_HEROS = new Artwork(
   ""
 );
 export const FETZ_OTTO_SWIMWEAR = new Artwork(
-  "/fetzottoswimwear",
+  "/fetzotto",
   "FETZ OTTO",
   "Swimwear",
   "/thumbnails/tn7.png",

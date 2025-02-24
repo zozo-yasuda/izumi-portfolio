@@ -1,8 +1,6 @@
 "use client";
-//import { Document, pdfjs, Page } from "react-pdf";
 import Artwork from "../models/Artwork";
-
-import React from "react";
+import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 
 const Document = dynamic(
@@ -17,8 +15,9 @@ const Page = dynamic(
     ssr: false,
   }
 );
+
 interface SideBarProps {
-  artwork : Artwork
+  artwork: Artwork;
 }
 
 interface PDFPageProps {
@@ -27,13 +26,20 @@ interface PDFPageProps {
   artwork: Artwork;
 }
 
-const PDFPage:React.FC<PDFPageProps> = ({ sidebar, fileName, artwork }) => {
+const PDFPage: React.FC<PDFPageProps> = ({ sidebar, fileName, artwork }) => {
+  useEffect(() => {
+    import("react-pdf").then(({ pdfjs }) => {
+      pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+    });
+  }, []);
+
   const SidebarComponent = sidebar;
+
   return (
     <section className="bg-offwhite flex flex-col sm:flex-row">
       <SidebarComponent artwork={artwork} />
       <div className="h-screen w-full">
-      <Document file={fileName}>
+        <Document file={fileName}>
           <Page pageNumber={1} />
         </Document>
       </div>

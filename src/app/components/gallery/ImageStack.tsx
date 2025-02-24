@@ -46,7 +46,7 @@ const ImageStack = (props: ImageStackProps) => {
         <h1 className="text-5xl font-tomarik text-left text-lime pl-4 pt-4">
           {props.artwork.title}
         </h1>
-        <p className="flex flex-col">{tagsList}</p>
+        <div className="flex flex-col">{tagsList}</div>
       </div>
       <Link href={props.artwork.key}>
         <LazyLoadImage
