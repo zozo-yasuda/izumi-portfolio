@@ -33,7 +33,7 @@ export const DOTNDONE = new Artwork(
   "/dotndone",
   "DOT & DONE",
   "Organizational Kit",
-  "/thumbnails/thumbnail-07.png",
+  "/thumbnails/DotnDone.png",
   [TAG.INTERACTION, TAG.PRINT, TAG.BRANDING],
   "/pdfs/DotnDone.pdf",
   (
