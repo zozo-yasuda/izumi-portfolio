@@ -9,8 +9,8 @@ const MobileLogo = () => {
         <Image
           src="/favilight.webp"
           alt="Logo"
-          width={30}
-          height={15}>
+          width={53}
+          height={47}>
             
           </Image>
       </Link>

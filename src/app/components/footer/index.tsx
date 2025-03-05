@@ -11,7 +11,7 @@ const Footer = () => {
     "/fetzottoswimwear",
   ];
   return (
-    <div className="pt-6 bg-offwhite">
+    <div className="pt-6 bg-white">
       {!exceptions.includes(usePathname()) && <FooterText />}
     </div>
   );

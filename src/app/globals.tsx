@@ -10,6 +10,7 @@ export enum TAG {
   PLAY = "play",
 }
 
+
 /**
  * key is the path for the specific page
  * URL
@@ -142,3 +143,17 @@ export const IZUMI_YASUDA = new Artwork(
   [],
   ""
 );
+
+export const artworks: Array<Artwork> = [
+  AKM_30,
+  DESIGN_HEROS,
+  FAUX_FLORIDA,
+  FETZ_OTTO_DAYCARE,
+  FETZ_OTTO_SWIMWEAR,
+  IZUMI_YASUDA,
+  KISUI_TECH_FLYER,
+  MUSIC_THEORY_CAT,
+  SOLUNA,
+  SWEET_SKETCH,
+  DOTNDONE,
+];

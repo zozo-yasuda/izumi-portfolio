@@ -1,86 +1,53 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import Logo from "./Logo";
-import MobileLogo from "./MobileLogo";
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState("/");
-  const [isMobile, setIsMobile] = useState(false);
-
-  const handleClick = (href: string) => {
-    setActiveLink(href);
+  const Logo = () => {
+    return (
+      <div>
+        <Link href="/">
+          <Image
+            src="/favilight.webp"
+            alt="Logo"
+            width={50}
+            height={10}
+            className="z-50"
+          ></Image>
+        </Link>
+      </div>
+    );
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    if (typeof window !== "undefined") {
-      // Set initial state
-      setIsMobile(window.innerWidth <= 768);
-
-      // Add event listener
-      window.addEventListener("resize", handleResize);
-
-      // Cleanup on unmount
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, []);
-
-  const menuItems = [
-    ["/", "Work"],
-    ["/about", "About"],
-    ["/contact", "Contact"],
-  ].map(([path, label], index) => {
-    return (
-      <li key={index}>
-        <span
-          onClick={() => handleClick(path)}
-          className="relative inline-block cursor-pointer"
-        >
-          {activeLink === path? 
-          (
-            <Link href={path} className="relative z-10 block text-red font-sans uppercase tracking-18">
-                {label}
-            </Link>
-          ) : (
-            <Link href={path} className="relative z-10 block text-offblack font-sans uppercase tracking-18">
-                {label}
-            </Link>
-          )
-          } 
-          {/*activeLink === path && (
-            <div className="absolute bottom-1 left-auto right-auto w-full h-1 bg-rose z-0"></div>
-          )*/}
-        </span>
-      </li>
-    );
-  });
-
   return (
-    <nav className="bg-offwhite shadow sticky w-full z-50 top-0">
-      {isMobile ? (
-        <>
-          <div className="flex justify-between items-center">
-            <MobileLogo />
-            <div className="">
-              <ul className="text-xs flex justify-end space-x-4">{menuItems}</ul>
-            </div>
+    <nav className="bg-white flex col-span-1 z-50 top-0 p-5">
+      <>
+        <div className="flex flex-col justify-between">
+          <div className="pl-10">
+            <ul className=" text-xs flex flex-row items-center gap-x-4">
+              <li className="p-2 pl-5">
+                <Logo />
+              </li>
+              <li>
+                <Link
+                  href={"/"}
+                  className="relative font-bold z-10 py-4 px-7 rounded-full block text-white bg-lime font-sans uppercase tracking-24"
+                >
+                  work
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={"/about"}
+                  className="relative font-bold z-10 py-4 px-4 rounded-full block text-white bg-lime font-sans uppercase tracking-24"
+                >
+                  about me
+                </Link>
+              </li>
+            </ul>
           </div>
-        </>
-      ) : (
-        <>
-          <div className="flex justify-between items-center">
-            <Logo />
-            <div className="">
-              <ul className="text-md mr-4 flex justify-end space-x-4">{menuItems}</ul>
-            </div>
-          </div>
-        </>
-      )}
+        </div>
+      </>
     </nav>
   );
 };

@@ -1,10 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-import Filters from "./filters";
+import React, { useState, useEffect } from "react";
 import Artwork from "../models/Artwork";
 import ImageStack from "./ImageStack";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import { TAG } from "@/app/globals";
 import * as ART from "@/app/globals";
+
+type ImageStackProps = {
+  artwork: Artwork;
+};
 
 const Gallery = () => {
   const artworks: Array<Artwork> = [
@@ -21,62 +23,45 @@ const Gallery = () => {
     ART.DOTNDONE,
   ];
 
-  const [filteredArtworks, setFilteredArtworks] = useState(artworks);
-  const [filterChanged, setFilterChanged] = useState(false);
-  const [currFilter, setFilter] = useState("all");
-
-  const handleFilterChange = (filter: string) => {
-    if (filter !== currFilter) {
-      setFilterChanged(true);
-      setFilter(filter);
-      if (filter === "all") {
-        setFilteredArtworks(artworks);
-      } else {
-        setFilteredArtworks(artworks.filter((artwork) => artwork.tags.has(filter)));
-      }
-    } else {
-      setFilterChanged(false);
-    }
-  };
-
   const [displayedArtworks, setDisplayedArtworks] = useState<Artwork[]>([]);
 
   useEffect(() => {
     setDisplayedArtworks([]);
     const timeoutId = setTimeout(() => {
-      setDisplayedArtworks(filteredArtworks);
+      setDisplayedArtworks(artworks);
     }, 500);
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [filteredArtworks]);
+  }, []);
 
-  const nodeRef = useRef(null);
+  const Content:React.FC<ImageStackProps> = ({artwork}) => {
+    const nodeRef = React.useRef(null);
+      return (
+        <CSSTransition
+          key={artwork.key}
+          timeout={500}
+          classNames="item"
+          appear={true}
+          in={displayedArtworks.includes(artwork)}
+          nodeRef={nodeRef}
+        >
+          <ImageStack artwork={artwork} ref={nodeRef} />
+        </CSSTransition>
+      );
+    };
+
 
   return (
-    <div className="pb-6 sm:p-6 px-4 min-h-screen">
-      <div className="flex flex-col sm:flex-row">
-        <Filters onFilterChange={handleFilterChange} />
+    <div className="col-span-2 pt-20">
+      <div className="flex flex-col justify-items-start">
         <TransitionGroup className="mx-auto grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {displayedArtworks.map((artwork: Artwork, index) => {
-            
-            return (
-              <CSSTransition
-                key={artwork.key}
-                timeout={500}
-                classNames="item"
-                appear={filterChanged}
-                enter={filterChanged}
-                nodeRef={nodeRef}
-              >
-                <ImageStack artwork={artwork} ref={nodeRef} />
-              </CSSTransition>
-            );
-          })}
+        {displayedArtworks.map((item) => (
+        <Content key={item.key} artwork={item}/>))}
         </TransitionGroup>
       </div>
     </div>
   );
-};
+}
 
 export default Gallery;
