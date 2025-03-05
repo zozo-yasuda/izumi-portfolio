@@ -1,6 +1,8 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 const HomeNav = () => {
   const Logo = () => {
@@ -17,14 +19,16 @@ const HomeNav = () => {
       </Link>
     </div>
   )};
-  const [activeLink, setActiveLink] = useState(location.pathname);
+
+  const pathName = usePathname();
+  const [activeLink, setActiveLink] = useState(pathName);
   const handleClick = (href: string) => {
     setActiveLink(href);
   };
 
   useEffect(() => {
-    setActiveLink(location.pathname); // Update activeLink on router changes
-  }, [location.pathname]);
+    setActiveLink(pathName); // Update activeLink on router changes
+  }, [pathName]);
 
 
   const workItem = () => {
