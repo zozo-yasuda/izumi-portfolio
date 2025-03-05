@@ -34,7 +34,7 @@ export const DOTNDONE = new Artwork(
   "/dotndone",
   "DOT & DONE",
   "Organizational Kit",
-  "/thumbnails/thumbnail-07.png",
+  "/thumbnails/DotnDone.png",
   [TAG.INTERACTION, TAG.PRINT, TAG.BRANDING],
   "/pdfs/DotnDone.pdf",
   (
@@ -97,7 +97,7 @@ export const FETZ_OTTO_SWIMWEAR = new Artwork(
   "Swimwear",
   "/thumbnails/tn7.png",
   [TAG.BRANDING],
-  "/pdfs/FetzOtto (1).pdf",
+  "/pdfs/FetzOtto.pdf",
   (
     <p>
       Fetz Otto Swimwear is a luxury brand blending beauty, detail, and comfort,
