@@ -8,7 +8,7 @@ export default function FauxFloridaPage() {
     <PDFPage
       sidebar={Sidebar}
       artwork={FAUX_FLORIDA}
-      fileName={"/fauxflorida/scrollable2.pdf"}
+      fileName={"/pdf/CloverValley.pdf"}
     />
   );
 }
