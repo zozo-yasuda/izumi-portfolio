@@ -32,7 +32,7 @@ export const FAUX_FLORIDA = new Artwork(
 
 export const DOTNDONE = new Artwork(
   "/dotndone",
-  "DOT & DONE",
+  "Dot & Done",
   "Organizational Kit",
   "/thumbnails/DotnDone.png",
   [TAG.INTERACTION, TAG.PRINT, TAG.BRANDING],
@@ -52,7 +52,7 @@ export const DOTNDONE = new Artwork(
 
 export const SOLUNA = new Artwork(
   "/soluna",
-  "SOLUNA",
+  "Soluna",
   "Brand Identity",
   "/thumbnails/Soluna.png",
   [TAG.BRANDING],
@@ -61,7 +61,7 @@ export const SOLUNA = new Artwork(
 
 export const KISUI_TECH_FLYER = new Artwork(
   "/kisuitech",
-  "KISUI TECH",
+  "Kisui Tech",
   "Flyer",
   "/thumbnails/KisuiTech.png",
   [TAG.PRINT],
@@ -78,7 +78,7 @@ export const MUSIC_THEORY_CAT = new Artwork(
 );
 export const DESIGN_HERO = new Artwork(
   "/designhero",
-  "DESIGN HERO",
+  "Design Hero",
   "Project",
   "/thumbnails/CarolynHawkins.png",
   [TAG.MOTION],
@@ -87,7 +87,7 @@ export const DESIGN_HERO = new Artwork(
 
 export const FETZ_OTTO_SWIMWEAR = new Artwork(
   "/fetzotto",
-  "FETZ OTTO",
+  "Fetz Otto",
   "Swimwear Brand",
   "/thumbnails/FetzOtto.png",
   [TAG.BRANDING],
@@ -108,7 +108,7 @@ export const FETZ_OTTO_SWIMWEAR = new Artwork(
 
 export const RAW_EDGE = new Artwork(
   "/rawedge",
-  "RAW EDGE",
+  "Raw Edge",
   "Mending Workshop",
   "/thumbnails/RawEdge.png",
   [TAG.MOTION],
@@ -117,7 +117,7 @@ export const RAW_EDGE = new Artwork(
 
 export const MINDFULL = new Artwork(
   "/mindfull",
-  "MINDFULL",
+  "Mindfull",
   "Game Concept",
   "/thumbnails/Mindfull.png",
   [TAG.MOTION],
@@ -126,7 +126,7 @@ export const MINDFULL = new Artwork(
 
 export const NAVIREADER = new Artwork(
   "/navireader",
-  "NAVIREADER",
+  "NaviReader",
   "Reading Tool",
   "/thumbnails/NaviReader.png",
   [TAG.MOTION],
@@ -135,7 +135,7 @@ export const NAVIREADER = new Artwork(
 
 export const ELECTROPHYSICS = new Artwork(
   "/electrophysics",
-  "ELECTROPHYSICS",
+  "Electrophysics",
   "Motion Graphic",
   "/thumbnails/Electrophysics.png",
   [TAG.MOTION],
