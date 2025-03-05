@@ -60,7 +60,7 @@ export const SOLUNA = new Artwork(
 );
 
 export const KISUI_TECH_FLYER = new Artwork(
-  "/kisuitechflyer",
+  "/kisuitech",
   "KISUI TECH FLYER",
   "Project",
   "/thumbnails/KisuiTech.png",
