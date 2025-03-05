@@ -33,11 +33,11 @@ const HomeNav = () => {
         >
           {activeLink === path? 
           (
-            <Link href={path} className="font-bold z-10 py-3 px-9 rounded-full block text-red bg-rose font-sans uppercase tracking-24 text-lg">
+            <Link href={path} className="font-bold z-10 py-3 px-9 rounded-full block text-red bg-rose font-sans uppercase tracking-24 text-lg border border-red">
                 {label}
             </Link>
           ) : (
-            <Link href={path} className="font-bold z-10 py-3 px-9 rounded-full block text-offblack bg-[#E6E6E6] font-sans uppercase tracking-24 text-lg">
+            <Link href={path} className="font-bold z-10 py-3 px-9 rounded-full block text-offblack bg-transparent font-sans uppercase tracking-24 text-lg border border-offblack hover:text-white hover:border-transparent hover:bg-offblack">
                 {label}
             </Link>
           )
@@ -51,16 +51,16 @@ const HomeNav = () => {
     const label = "About Me";
     return (
         <div
-          onClick={() => handleClick(path)}
+          onClick={() => handleClick("/about")}
           className="flex-grow inline-block cursor-pointer"
         >
-          {activeLink === path? 
+          {activeLink === "/about"? 
           (
-            <Link href={path} className="font-bold z-10 py-3 px-6 rounded-full block text-red bg-rose font-sans uppercase tracking-24 text-lg">
+            <Link href="/about" className="font-bold z-10 py-3 px-9 rounded-full block text-red bg-rose font-sans uppercase tracking-24 text-lg border border-red">
                 {label}
             </Link>
           ) : (
-            <Link href={path} className="font-bold z-10 py-3 px-6 rounded-full block text-offblack bg-[#E6E6E6] font-sans uppercase tracking-24 text-lg">
+            <Link href="/about" className="font-bold z-10 py-3 px-9 rounded-full block text-offblack bg-transparent font-sans uppercase tracking-24 text-lg border border-offblack hover:text-white hover:border-transparent hover:bg-offblack">
                 {label}
             </Link>
           )
