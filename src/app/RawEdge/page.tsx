@@ -3,7 +3,7 @@ import Sidebar from "../components/artsidebar";
 import PDFPage from "../components/portfolioPages/pdfPage";
 import { RAW_EDGE } from "../globals";
 
-export default function DotndonePage() {
+export default function RawEdgePage() {
   return (
     <PDFPage
       sidebar={Sidebar}
