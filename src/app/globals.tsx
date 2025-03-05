@@ -76,9 +76,9 @@ export const MUSIC_THEORY_CAT = new Artwork(
   [TAG.ILLUSTRATION],
   "/pdf/Remi.pdf"
 );
-export const DESIGN_HEROS = new Artwork(
-  "/designheros",
-  "DESIGN HEROS",
+export const DESIGN_HERO = new Artwork(
+  "/designhero",
+  "DESIGN HERO",
   "Project",
   "/thumbnails/CarolynHawkins.png",
   [TAG.MOTION],
@@ -153,5 +153,5 @@ export const artworks: Array<Artwork> = [
   FAUX_FLORIDA,
   MUSIC_THEORY_CAT,
   ELECTROPHYSICS,
-  DESIGN_HEROS,
+  DESIGN_HERO,
 ];
