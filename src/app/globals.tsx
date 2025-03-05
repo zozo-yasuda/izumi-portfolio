@@ -126,7 +126,7 @@ export const MINDFULL = new Artwork(
 
 export const NAVIREADER = new Artwork(
   "/navireader",
-  "NAVIREADER",
+  "NAVI　READER",
   "Reading Tool",
   "/thumbnails/NaviReader.png",
   [TAG.MOTION],
