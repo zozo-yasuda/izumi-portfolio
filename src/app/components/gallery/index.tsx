@@ -2,26 +2,15 @@ import React, { useState, useEffect } from "react";
 import Artwork from "../models/Artwork";
 import ImageStack from "./ImageStack";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import * as ART from "@/app/globals";
+import { artworks } from "@/app/globals";
 
 type ImageStackProps = {
   artwork: Artwork;
 };
 
+
+
 const Gallery = () => {
-  const artworks: Array<Artwork> = [
-    ART.AKM_30,
-    ART.DESIGN_HEROS,
-    ART.FAUX_FLORIDA,
-    ART.FETZ_OTTO_DAYCARE,
-    ART.FETZ_OTTO_SWIMWEAR,
-    ART.IZUMI_YASUDA,
-    ART.KISUI_TECH_FLYER,
-    ART.MUSIC_THEORY_CAT,
-    ART.SOLUNA,
-    ART.SWEET_SKETCH,
-    ART.DOTNDONE,
-  ];
 
   const [displayedArtworks, setDisplayedArtworks] = useState<Artwork[]>([]);
 

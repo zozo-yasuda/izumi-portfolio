@@ -38,17 +38,21 @@ const PDFPage: React.FC<PDFPageProps> = ({ sidebar, fileName, artwork }) => {
 
   const SidebarComponent = sidebar;
 
-  const [pageWidth, setPageWidth] = useState(window.innerWidth);
+  const [pageWidth, setPageWidth] = useState(0);
   useEffect(() => {
-    const handleResize = () => {
+    if (typeof window !== 'undefined') {
       setPageWidth(window.innerWidth);
-    };
 
-    window.addEventListener('resize', handleResize);
+      const handleResize = () => {
+          setPageWidth(window.innerWidth);
+      };
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+          window.removeEventListener('resize', handleResize);
+      };
+    }
   }, []);
 
   return (
