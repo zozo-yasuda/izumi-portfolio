@@ -8,7 +8,7 @@ export default function FetzOttoSwimWearPage() {
     <PDFPage
       sidebar={Sidebar}
       artwork={FETZ_OTTO_SWIMWEAR}
-      fileName={"/pdfs/FetzOtto (1).pdf"}
+      fileName={"/pdfs/FetzOtto.pdf"}
     />
   )
 }
