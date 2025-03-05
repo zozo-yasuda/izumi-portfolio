@@ -22,9 +22,9 @@ export enum TAG {
  * text (JSX format)
  */
 export const FAUX_FLORIDA = new Artwork(
-  "/fauxflorida",
-  "FAUX FLORIDA",
-  "Project",
+  "/clovervalley",
+  "Clover Valley",
+  "Magazine Spread",
   "/thumbnails/CloverValley.png",
   [TAG.PRINT],
   "/pdf/CloverValley.pdf"
@@ -53,7 +53,7 @@ export const DOTNDONE = new Artwork(
 export const SOLUNA = new Artwork(
   "/soluna",
   "SOLUNA",
-  "Project",
+  "Brand Identity",
   "/thumbnails/Soluna.png",
   [TAG.BRANDING],
   "/pdf/Soluna.pdf"
@@ -61,17 +61,17 @@ export const SOLUNA = new Artwork(
 
 export const KISUI_TECH_FLYER = new Artwork(
   "/kisuitech",
-  "KISUI TECH FLYER",
-  "Project",
+  "KISUI TECH",
+  "Flyer",
   "/thumbnails/KisuiTech.png",
   [TAG.PRINT],
   "/pdf/KisuiTech.pdf"
 );
 
 export const MUSIC_THEORY_CAT = new Artwork(
-  "/musictheorycat",
-  "MUSIC THEORY CAT",
-  "Project",
+  "/remi",
+  "Remi",
+  "The Musical Cat",
   "/thumbnails/Remi.png",
   [TAG.ILLUSTRATION],
   "/pdf/Remi.pdf"
@@ -88,7 +88,7 @@ export const DESIGN_HEROS = new Artwork(
 export const FETZ_OTTO_SWIMWEAR = new Artwork(
   "/fetzotto",
   "FETZ OTTO",
-  "Swimwear",
+  "Swimwear Brand",
   "/thumbnails/FetzOtto.png",
   [TAG.BRANDING],
   "/pdfs/FetzOtto.pdf",
@@ -126,7 +126,7 @@ export const MINDFULL = new Artwork(
 
 export const NAVIREADER = new Artwork(
   "/navireader",
-  "NAVI　READER",
+  "NAVIREADER",
   "Reading Tool",
   "/thumbnails/NaviReader.png",
   [TAG.MOTION],
