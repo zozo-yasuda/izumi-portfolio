@@ -3,7 +3,7 @@ import Sidebar from "../components/artsidebar";
 import PDFPage from "../components/portfolioPages/pdfPage";
 import { KISUI_TECH_FLYER } from "../globals";
 
-export default function KisuiTechFlyerPage() {
+export default function KisuiTechPage() {
   return (
     <PDFPage
       sidebar={Sidebar}
