@@ -140,7 +140,7 @@ export const NAVIREADER = new Artwork(
 
 export const ELECTROPHYSICS = new Artwork(
   "/electrophysics",
-  "Electrophysics",
+  "Electro- physics",
   "Motion Graphic",
   "/thumbnails/Electrophysics.gif",
   [TAG.MOTION],
