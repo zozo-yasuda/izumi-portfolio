@@ -46,6 +46,9 @@ export const DOTNDONE = new Artwork(
       wall, turning organization into a fun and visually satisfying experience.
       By combining functionality with gamification, Dot and Done encourages
       consistency without the pressure of a traditional calendar.
+      <br />
+      <br />
+      This work was exhibited at Ligature 34, a juried student exhibition held at the University of Florida’s School of Art and Art History.
     </p>
   )
 );
