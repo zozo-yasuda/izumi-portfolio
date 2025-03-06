@@ -27,7 +27,7 @@ export const FAUX_FLORIDA = new Artwork(
   "Magazine Spread",
   "/thumbnails/CloverValley.png",
   [TAG.PRINT],
-  "/pdf/CloverValley.pdf"
+  "/pdfs/CloverValley.pdf"
 );
 
 export const DOTNDONE = new Artwork(
