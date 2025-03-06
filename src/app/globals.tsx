@@ -137,7 +137,7 @@ export const ELECTROPHYSICS = new Artwork(
   "/electrophysics",
   "Electrophysics",
   "Motion Graphic",
-  "/thumbnails/Electrophysics.png",
+  "/thumbnails/Electrophysics.gif",
   [TAG.MOTION],
   ""
 );
