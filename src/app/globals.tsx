@@ -79,6 +79,7 @@ export const MUSIC_THEORY_CAT = new Artwork(
     <p>
       Anisong, UF’s anime song ensemble club, features a rebranded logo and mascot. The logo, inspired by a snare drum, combines Japanese and English typography to form its shape. To introduce the rebrand, a short comic was released on social media featuring Remi, a musical black cat. Originally created for a different project illustrating music theory concepts, Remi was later adopted as Anisong’s official mascot due to his musical-themed design and his “kawaii” appearance.
     </p>
+  )
 );
 export const DESIGN_HERO = new Artwork(
   "/designhero",
