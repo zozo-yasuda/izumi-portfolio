@@ -44,7 +44,7 @@ const ImageStack = forwardRef<HTMLDivElement, ImageStackProps>((props, ref) => {
                                           transition-opacity duration-500 ease-in"
         style={{ opacity: isHovered ? 1 : 0 }}
       >
-        <h1 className="text-5xl font-tomarik text-left text-lime pl-4 pt-4 w-full">
+        <h1 className="text-5xl font-tomarik break-words text-lime pl-4 pt-4 w-full">
           {props.artwork.title}
         </h1>
         <div className="flex flex-col">{tagsList}</div>
