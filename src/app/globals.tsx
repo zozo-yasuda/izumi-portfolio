@@ -126,7 +126,12 @@ export const MINDFULL = new Artwork(
   "Game Concept",
   "/thumbnails/Mindfull.png",
   [TAG.MOTION],
-  "/pdf/Mindfull.pdf"
+  "/pdf/Mindfull.pdf",
+    (
+    <p>
+      Mindfull is a narrative-driven game concept that explores the experience of ADHD over a work week. Through deceptively simple tasks and mini-games made challenging by simulated ADHD effects, players navigate an office environment while facing distractions, time blindness, and the impact of words from colleagues. Mindfull highlights how everyday interactions can shape the experience of neurodivergent individuals, fostering empathy and awareness through gameplay.
+    </p>
+  )
 );
 
 export const NAVIREADER = new Artwork(
@@ -135,7 +140,15 @@ export const NAVIREADER = new Artwork(
   "Reading Tool",
   "/thumbnails/NaviReader.png",
   [TAG.MOTION],
-  "/pdf/NaviReader.pdf"
+  "/pdf/NaviReader.pdf",
+      (
+    <p>
+      NaviReader is a futuristic reading tool that encourages children to read out loud for a fun, interactive reading experience. NaviReader clips onto the side of a book or tablet, displaying holographic animations as a reward as they read. This project was developed by a team of three designers who worked collaboratively on all aspects, including the product design, app UI mockup, and motion graphic.
+      <br />
+      <br />
+      This work was exhibited at Ligature 34, a juried  student exhibition held at the University of Florida’s School of Art and Art History.
+    </p>
+  )
 );
 
 export const ELECTROPHYSICS = new Artwork(
