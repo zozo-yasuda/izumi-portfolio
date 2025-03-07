@@ -9,7 +9,7 @@ export default function DesignHerosPage() {
       sidebar={Sidebar}
       artwork={DESIGN_HERO}
       fileName={"/pdfs/CarolynHawkins.pdf"}
-      video={"./Videos/CarolynHawkins.mp4"}
+      video={"/Videos/CarolynHawkins.mp4"}
     />
   )
 }

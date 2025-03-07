@@ -9,6 +9,8 @@ export default function MindfullPage() {
       sidebar={Sidebar}
       artwork={MINDFULL}
       fileName={"/pdfs/Mindfull.pdf"}
+      mindfullVideo1={""}
+      mindfullVideo2={""}
     />
   )
 }

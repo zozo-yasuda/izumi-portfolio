@@ -25,9 +25,11 @@ interface PDFPageProps {
   fileName: string;
   artwork: Artwork;
   video?: string;
+  mindfullVideo1?: string;
+  mindfullVideo2?: string;
 }
 
-const PDFPage: React.FC<PDFPageProps> = ({ sidebar, fileName, artwork, video }) => {
+const PDFPage: React.FC<PDFPageProps> = ({ sidebar, fileName, artwork, video, mindfullVideo1, mindfullVideo2 }) => {
   
 
   useEffect(() => {
@@ -56,10 +58,14 @@ const PDFPage: React.FC<PDFPageProps> = ({ sidebar, fileName, artwork, video }) 
     }
   }, []);
 
-  function Video() {
+  interface VideoProps {
+    videoFile: string;
+  }
+
+  const Video: React.FC<VideoProps> = ({videoFile}) => {
     return (
       <video width={Math.floor(2/3 * pageWidth) } height="240" controls preload="none">
-        <source src={video} type="video/mp4" />
+        <source src={videoFile} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     )
@@ -70,10 +76,12 @@ const PDFPage: React.FC<PDFPageProps> = ({ sidebar, fileName, artwork, video }) 
       <div className="grid grid-cols-3">
         <SidebarComponent artwork={artwork} />
         <div className="col-span-2 flex flex-col">
-          {video?(<Video></Video>):(<></>)}
+          {video?(<Video videoFile={video}></Video>):(<></>)}
           <Document file={fileName}>
             <Page pageNumber={1} renderAnnotationLayer={false} renderTextLayer={false} width={ Math.floor(2/3 * pageWidth)} />
           </Document>
+          {mindfullVideo1?(<Video videoFile={mindfullVideo1}></Video>):(<></>)}
+          {mindfullVideo2?(<Video videoFile={mindfullVideo2}></Video>):(<></>)}
           </div>
       </div>
       
