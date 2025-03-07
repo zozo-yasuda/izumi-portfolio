@@ -134,7 +134,7 @@ export const RAW_EDGE = new Artwork(
   "Mending Workshop",
   "/thumbnails/RawEdge.png",
   [TAG.MOTION],
-  "/pdfs/RawEdge.pdf"
+  "/pdfs/RawEdge.pdf",
   (
     <p>
       The Raw Edge Mending Workshop aimed to educate UF students about the environmental impact of fast fashion and empower them with sustainable alternatives. Developed by a team of five designers, the workshop included hands-on sewing tutorials and two zines—one on sewing techniques and another on the negative effects of fast fashion. My main contribution was designing the latter, highlighting practical ways to combat waste in the fashion industry.

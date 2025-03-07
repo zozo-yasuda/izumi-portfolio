@@ -35,7 +35,7 @@ const HomeNav = () => {
     return (
         <div
           onClick={() => handleClick("/")}
-          className="flex-grow block cursor-pointer"
+          className="cursor-pointer"
         >
           {activeLink === "/"? 
           (
@@ -56,15 +56,15 @@ const HomeNav = () => {
     return (
         <div
           onClick={() => handleClick("/about")}
-          className="flex-grow inline-block cursor-pointer"
+          className="cursor-pointer"
         >
           {activeLink === "/about"? 
           (
-            <Link href="/about" className="font-bold z-10 py-3 px-9 rounded-full block text-red bg-rose font-sans uppercase tracking-24 text-lg border-2 border-red">
+            <Link href="/about" className="font-bold z-10 py-3 px-9 rounded-full block text-red bg-rose font-sans uppercase tracking-24 border-2 border-red">
                 About Me
             </Link>
           ) : (
-            <Link href="/about" className="font-bold z-10 py-3 px-9 rounded-full block text-offblack bg-transparent font-sans uppercase tracking-24 text-lg border-2 border-offblack hover:text-white hover:border-transparent hover:bg-offblack">
+            <Link href="/about" className="font-bold z-10 py-3 px-9 rounded-full block text-offblack bg-transparent font-sans uppercase tracking-24 border-2 border-offblack hover:text-white hover:border-transparent hover:bg-offblack">
                 About Me
             </Link>
           )
@@ -74,15 +74,13 @@ const HomeNav = () => {
   }
 
   return (
-    <nav className="bg-white flex col-span-1 mx-auto my-auto">
-        <>
-          <div className="flex flex-col text-center justify-around gap-y-3">
-              <Logo></Logo>
-                {workItem()}
-                {aboutItem()}
-          </div>
-        </>
-    </nav>
+    <nav className="bg-white flex col-span-1 w-1/2 h-screen sticky top-0">
+        <div className="flex flex-col text-center gap-y-3">
+          <Logo></Logo>
+            {workItem()}
+            {aboutItem()}
+      </div>
+  </nav>
   );
 };
 
