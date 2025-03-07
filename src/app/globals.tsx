@@ -30,7 +30,7 @@ export const FAUX_FLORIDA = new Artwork(
   "/pdfs/CloverValley.pdf",
   (
     <p>
-    Clover Valley is a fictional Florida town brought to life through two magazine spreads. Designed with a sepia-toned color palette, the spreads capture the town’s slow-paced charm, while the title, Escape to Clover Valley, uses expressive typography to evoke a light, airy atmosphere.
+    Clover Valley is a fictional Florida town brought to life through two magazine spreads. Designed with a sepia-toned color palette, the spreads capture the town&apos;s slow-paced charm, while the title, Escape to Clover Valley, uses expressive typography to evoke a light, airy atmosphere.
     </p>
   )
 );
@@ -89,7 +89,7 @@ export const MUSIC_THEORY_CAT = new Artwork(
   "/pdf/Remi.pdf",
   (
     <p>
-      Anisong, UF’s anime song ensemble club, features a rebranded logo and mascot. The logo, inspired by a snare drum, combines Japanese and English typography to form its shape. To introduce the rebrand, a short comic was released on social media featuring Remi, a musical black cat. Originally created for a different project illustrating music theory concepts, Remi was later adopted as Anisong’s official mascot due to his musical-themed design and his “kawaii” appearance.
+      Anisong, UF&apos;s anime song ensemble club, features a rebranded logo and mascot. The logo, inspired by a snare drum, combines Japanese and English typography to form its shape. To introduce the rebrand, a short comic was released on social media featuring Remi, a musical black cat. Originally created for a different project illustrating music theory concepts, Remi was later adopted as Anisong’s official mascot due to his musical-themed design and his &quot;kawaii&quot; appearance.
     </p>
   )
 );
