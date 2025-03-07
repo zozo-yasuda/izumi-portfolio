@@ -74,7 +74,7 @@ const HomeNav = () => {
   }
 
   return (
-    <nav className="bg-white flex col-span-1 w-1/2 h-screen sticky top-0">
+    <nav className="grid h-screen place-items-center bg-white flex col-span-1 sticky top-0">
         <div className="flex flex-col text-center gap-y-3">
           <Logo></Logo>
             {workItem()}
