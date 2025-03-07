@@ -85,7 +85,7 @@ export const MUSIC_THEORY_CAT = new Artwork(
   "Remi",
   "The Musical Cat",
   "/thumbnails/Remi.png",
-  [TAG.ILLUSTRATION],
+  [TAG.BRANDING, TAG.ILLUSTRATION],
   "/pdfs/Remi.pdf",
   (
     <p>
@@ -133,7 +133,7 @@ export const RAW_EDGE = new Artwork(
   "Raw Edge",
   "Mending Workshop",
   "/thumbnails/RawEdge.png",
-  [TAG.MOTION],
+  [TAG.BRANDING, TAG.PRINT],
   "/pdfs/RawEdge.pdf",
   (
     <p>
@@ -161,7 +161,7 @@ export const NAVIREADER = new Artwork(
   "NaviReader",
   "Reading Tool",
   "/thumbnails/NaviReader.png",
-  [TAG.MOTION],
+  [TAG.MOTION, TAG.INTERACTION],
   "/pdfs/NaviReader.pdf",
   (
     <p>
