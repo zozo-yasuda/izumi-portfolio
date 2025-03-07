@@ -9,6 +9,7 @@ export default function NaviReaderPage() {
       sidebar={Sidebar}
       artwork={NAVIREADER}
       fileName={"/pdfs/NaviReader.pdf"}
+      video={"/Videos/NaviReader.mp4"}
     />
   )
 }

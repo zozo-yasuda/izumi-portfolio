@@ -24,9 +24,10 @@ interface PDFPageProps {
   sidebar: React.FC<SideBarProps>;
   fileName: string;
   artwork: Artwork;
+  video?: string;
 }
 
-const PDFPage: React.FC<PDFPageProps> = ({ sidebar, fileName, artwork }) => {
+const PDFPage: React.FC<PDFPageProps> = ({ sidebar, fileName, artwork, video }) => {
   
 
   useEffect(() => {
@@ -55,13 +56,25 @@ const PDFPage: React.FC<PDFPageProps> = ({ sidebar, fileName, artwork }) => {
     }
   }, []);
 
+  function Video() {
+    return (
+      <video width={Math.floor(2/3 * pageWidth) } height="240" controls preload="none">
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    )
+  }
+
   return (
     <section className="bg-offwhite flex flex-col">
       <div className="grid grid-cols-3">
         <SidebarComponent artwork={artwork} />
-          <Document file={fileName} className="col-span-2">
+        <div className="col-span-2 flex flex-col">
+          {video?(<Video></Video>):(<></>)}
+          <Document file={fileName}>
             <Page pageNumber={1} renderAnnotationLayer={false} renderTextLayer={false} width={ Math.floor(2/3 * pageWidth)} />
           </Document>
+          </div>
       </div>
       
     </section>

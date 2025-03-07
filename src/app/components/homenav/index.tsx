@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 const HomeNav = () => {
   const Logo = () => {
     return (
-  <div className="flex-grow block">
+  <div className="">
       <Link href="/">
         <Image
           src="/Logo.png"
@@ -39,11 +39,11 @@ const HomeNav = () => {
         >
           {activeLink === "/"? 
           (
-            <Link href="/" className="cursor-not-allowed font-bold z-10 py-3 px-9 rounded-full block text-red bg-rose font-sans uppercase tracking-24 text-lg border-2 border-red">
+            <Link href="/" className="font-bold z-10 py-3 px-9 rounded-full block text-red bg-rose font-sans uppercase tracking-24 text-lg border-2 border-red">
                 Work
             </Link>
           ) : (
-            <Link href="/" className="font-bold z-10 py-3 px-9 rounded-full block text-offblack bg-transparent font-sans uppercase tracking-24 text-lg border border-offblack hover:text-white hover:border-transparent hover:bg-offblack">
+            <Link href="/" className="font-bold z-10 py-3 px-9 rounded-full block text-offblack bg-transparent font-sans uppercase tracking-24 text-lg border-2 border-offblack hover:text-white hover:border-transparent hover:bg-offblack">
                 Work
             </Link>
           )
@@ -60,11 +60,11 @@ const HomeNav = () => {
         >
           {activeLink === "/about"? 
           (
-            <Link href="/about" className="cursor-not-allowed font-bold z-10 py-3 px-9 rounded-full block text-red bg-rose font-sans uppercase tracking-24 text-lg border-2 border-red">
+            <Link href="/about" className="font-bold z-10 py-3 px-9 rounded-full block text-red bg-rose font-sans uppercase tracking-24 text-lg border-2 border-red">
                 About Me
             </Link>
           ) : (
-            <Link href="/about" className="font-bold z-10 py-3 px-9 rounded-full block text-offblack bg-transparent font-sans uppercase tracking-24 text-lg border border-offblack hover:text-white hover:border-transparent hover:bg-offblack">
+            <Link href="/about" className="font-bold z-10 py-3 px-9 rounded-full block text-offblack bg-transparent font-sans uppercase tracking-24 text-lg border-2 border-offblack hover:text-white hover:border-transparent hover:bg-offblack">
                 About Me
             </Link>
           )

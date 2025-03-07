@@ -4,7 +4,7 @@ import HomeNav from "./components/homenav";
 
 export default function Page() {
   return (
-    <div className="bg-white grid grid-cols-3 justify-items-stretch h-screen">
+    <div className="bg-white grid grid-cols-3 h-screen">
       <HomeNav />
       <Gallery />
     </div>

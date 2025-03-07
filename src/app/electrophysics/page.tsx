@@ -9,6 +9,7 @@ export default function ElectrophysicsPage() {
       sidebar={Sidebar}
       artwork={ELECTROPHYSICS}
       fileName={"/pdfs/NaviReader.pdf"}
+      video={"/Videos/Electrophysics.mp4"}
     />
   )
 }
