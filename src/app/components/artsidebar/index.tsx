@@ -54,7 +54,7 @@ const Sidebar:React.FC<SideBarProps> = ({artwork}) => {
       <ul className="pt-4 px-20 py-2 uppercase text-bold text-xs text-green tracking-18 font-sans flex flex-row flex-wrap gap-x-2 gap-y-3">
         {Tags()}
       </ul>
-      <div className="px-20 text-left pt-4 text-offblack font-sans tracking-5 text-xs sm:text-sm md:text-sm">
+      <div className="px-20 text-left pt-4 text-offblack font-sans tracking-5 text-xs sm:text-sm md:text-sm text-pretty">
         {artwork.text}
       </div>
       <div className="flex justify-between pt-16 px-20 text-left pt-8 text-green font-sans tracking-5 text-xs sm:text-sm md:text-sm">
