@@ -27,7 +27,12 @@ export const FAUX_FLORIDA = new Artwork(
   "Magazine Spread",
   "/thumbnails/CloverValley.png",
   [TAG.PRINT],
-  "/pdfs/CloverValley.pdf"
+  "/pdfs/CloverValley.pdf",
+  (
+    <p>
+    Clover Valley is a fictional Florida town brought to life through two magazine spreads. Designed with a sepia-toned color palette, the spreads capture the town’s slow-paced charm, while the title, Escape to Clover Valley, uses expressive typography to evoke a light, airy atmosphere.
+    </p>
+  )
 );
 
 export const DOTNDONE = new Artwork(
@@ -39,13 +44,7 @@ export const DOTNDONE = new Artwork(
   "/pdfs/DotnDone.pdf",
   (
     <p>
-      Dot & Done is a task management tool designed for individuals with ADHD.
-      It features a sticky note pad with perforated dots that users punch out
-      after completing tasks, which can be collected in a bottle as a reward.
-      Over 12 days, the sticky notes reveal a pixel art picture when placed on a
-      wall, turning organization into a fun and visually satisfying experience.
-      By combining functionality with gamification, Dot and Done encourages
-      consistency without the pressure of a traditional calendar.
+      Dot & Done is a task management tool designed for individuals with ADHD. Users punch out perforated dots on a sticky note pad after completing tasks, collecting them in a bottle as a reward. Over 12 days, the notes form a pixel art picture, turning organization into a fun, gamified experience.
       <br />
       <br />
       This work was exhibited at Ligature 34, a juried student exhibition held at the University of Florida’s School of Art and Art History.
@@ -59,7 +58,12 @@ export const SOLUNA = new Artwork(
   "Brand Identity",
   "/thumbnails/Soluna.png",
   [TAG.BRANDING],
-  "/pdf/Soluna.pdf"
+  "/pdf/Soluna.pdf",
+  (
+    <p>
+    Soluna is a brand identity concept for a fictional aromatherapy company inspired by the balance of the sun and moon. The logo, evoking a solar eclipse, is complemented by a deep blue and gold color palette, symbolizing harmony. Packaging mockups extend this theme, designed to transport users through scent—whether to tranquil woods, a mountain breeze, or a lavender field.
+    </p>
+  )
 );
 
 export const KISUI_TECH_FLYER = new Artwork(
@@ -68,7 +72,12 @@ export const KISUI_TECH_FLYER = new Artwork(
   "Flyer",
   "/thumbnails/KisuiTech.png",
   [TAG.PRINT],
-  "/pdf/KisuiTech.pdf"
+  "/pdf/KisuiTech.pdf",
+  (
+    <p>
+      Collaborating with Kisui Tech, a startup in Japan, I designed a flyer introducing their AI-powered agriculture robot, Adam. The flyer showcases the robot’s three movement modes and technical specifications, using Japanese typography to enhance clarity and accessibility for the target audience.
+    </p>
+  )
 );
 
 export const MUSIC_THEORY_CAT = new Artwork(
@@ -90,7 +99,12 @@ export const DESIGN_HERO = new Artwork(
   "Project",
   "/thumbnails/CarolynHawkins.png",
   [TAG.MOTION],
-  "/pdf/CarolynHawkins.pdf"
+  "/pdf/CarolynHawkins.pdf",
+  (
+    <p>
+    This four-slide presentation explores the work of Carolyn Hawkins, a Melbourne-based designer known for her chaotic, textured style. Inspired by her posters and illustrations, I designed the slides to reflect her distinct visual language, incorporating splash animation for an engaging, dynamic experience.
+    </p>
+  )
 );
 
 export const FETZ_OTTO_SWIMWEAR = new Artwork(
@@ -121,6 +135,11 @@ export const RAW_EDGE = new Artwork(
   "/thumbnails/RawEdge.png",
   [TAG.MOTION],
   "/pdf/RawEdge.pdf"
+  (
+    <p>
+      The Raw Edge Mending Workshop aimed to educate UF students about the environmental impact of fast fashion and empower them with sustainable alternatives. Developed by a team of five designers, the workshop included hands-on sewing tutorials and two zines—one on sewing techniques and another on the negative effects of fast fashion. My main contribution was designing the latter, highlighting practical ways to combat waste in the fashion industry.
+    </p>
+  )
 );
 
 export const MINDFULL = new Artwork(
@@ -160,7 +179,12 @@ export const ELECTROPHYSICS = new Artwork(
   "Motion Graphic",
   "/thumbnails/Electrophysics.gif",
   [TAG.MOTION],
-  ""
+  "",
+  (
+    <p>
+    This 15-second video on electrophysics was designed for public display in a science building. The first half of the animation mimics the electrical graph of a neuron firing, while the latter half visualizes the organic structure of neurons and their electrical signals, blending science with motion design.
+    </p>
+  )
 );
 
 export const artworks: Array<Artwork> = [
