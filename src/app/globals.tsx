@@ -58,7 +58,7 @@ export const SOLUNA = new Artwork(
   "Brand Identity",
   "/thumbnails/Soluna.png",
   [TAG.BRANDING],
-  "/pdf/Soluna.pdf",
+  "/pdfs/Soluna.pdf",
   (
     <p>
     Soluna is a brand identity concept for a fictional aromatherapy company inspired by the balance of the sun and moon. The logo, evoking a solar eclipse, is complemented by a deep blue and gold color palette, symbolizing harmony. Packaging mockups extend this theme, designed to transport users through scent—whether to tranquil woods, a mountain breeze, or a lavender field.
@@ -72,7 +72,7 @@ export const KISUI_TECH_FLYER = new Artwork(
   "Flyer",
   "/thumbnails/KisuiTech.png",
   [TAG.PRINT],
-  "/pdf/KisuiTech.pdf",
+  "/pdfs/KisuiTech.pdf",
   (
     <p>
       Collaborating with Kisui Tech, a startup in Japan, I designed a flyer introducing their AI-powered agriculture robot, Adam. The flyer showcases the robot’s three movement modes and technical specifications, using Japanese typography to enhance clarity and accessibility for the target audience.
@@ -86,7 +86,7 @@ export const MUSIC_THEORY_CAT = new Artwork(
   "The Musical Cat",
   "/thumbnails/Remi.png",
   [TAG.ILLUSTRATION],
-  "/pdf/Remi.pdf",
+  "/pdfs/Remi.pdf",
   (
     <p>
       Anisong, UF&apos;s anime song ensemble club, features a rebranded logo and mascot. The logo, inspired by a snare drum, combines Japanese and English typography to form its shape. To introduce the rebrand, a short comic was released on social media featuring Remi, a musical black cat. Originally created for a different project illustrating music theory concepts, Remi was later adopted as Anisong’s official mascot due to his musical-themed design and his &quot;kawaii&quot; appearance.
@@ -99,7 +99,7 @@ export const DESIGN_HERO = new Artwork(
   "Project",
   "/thumbnails/CarolynHawkins.png",
   [TAG.MOTION],
-  "/pdf/CarolynHawkins.pdf",
+  "/pdfs/CarolynHawkins.pdf",
   (
     <p>
     This four-slide presentation explores the work of Carolyn Hawkins, a Melbourne-based designer known for her chaotic, textured style. Inspired by her posters and illustrations, I designed the slides to reflect her distinct visual language, incorporating splash animation for an engaging, dynamic experience.
@@ -134,7 +134,7 @@ export const RAW_EDGE = new Artwork(
   "Mending Workshop",
   "/thumbnails/RawEdge.png",
   [TAG.MOTION],
-  "/pdf/RawEdge.pdf"
+  "/pdfs/RawEdge.pdf"
   (
     <p>
       The Raw Edge Mending Workshop aimed to educate UF students about the environmental impact of fast fashion and empower them with sustainable alternatives. Developed by a team of five designers, the workshop included hands-on sewing tutorials and two zines—one on sewing techniques and another on the negative effects of fast fashion. My main contribution was designing the latter, highlighting practical ways to combat waste in the fashion industry.
@@ -148,7 +148,7 @@ export const MINDFULL = new Artwork(
   "Game Concept",
   "/thumbnails/Mindfull.png",
   [TAG.MOTION],
-  "/pdf/Mindfull.pdf",
+  "/pdfs/Mindfull.pdf",
   (
     <p>
       Mindfull is a narrative-driven game concept that explores the experience of ADHD over a work week. Through deceptively simple tasks and mini-games made challenging by simulated ADHD effects, players navigate an office environment while facing distractions, time blindness, and the impact of words from colleagues. Mindfull highlights how everyday interactions can shape the experience of neurodivergent individuals, fostering empathy and awareness through gameplay.
@@ -162,7 +162,7 @@ export const NAVIREADER = new Artwork(
   "Reading Tool",
   "/thumbnails/NaviReader.png",
   [TAG.MOTION],
-  "/pdf/NaviReader.pdf",
+  "/pdfs/NaviReader.pdf",
   (
     <p>
       NaviReader is a futuristic reading tool that encourages children to read out loud for a fun, interactive reading experience. NaviReader clips onto the side of a book or tablet, displaying holographic animations as a reward as they read. This project was developed by a team of three designers who worked collaboratively on all aspects, including the product design, app UI mockup, and motion graphic.
