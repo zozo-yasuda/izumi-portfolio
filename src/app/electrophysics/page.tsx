@@ -8,7 +8,7 @@ export default function ElectrophysicsPage() {
     <PDFPage
       sidebar={Sidebar}
       artwork={ELECTROPHYSICS}
-      fileName={"/pdfs/NaviReader.pdf"}
+      fileName={""}
       video={"/Videos/Electrophysics.mp4"}
     />
   )
