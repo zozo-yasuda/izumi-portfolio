@@ -21,11 +21,7 @@ export default function Page() {
           Thank you for checking out my website!
         </h2>
         <p className="w-full lg:w-3/4 text-offblack font-sans tracking-5">
-          I am a graphic designer and a third year undergraduate student at UF.
-          I have international graphic design experience as an intern, designing
-          flyers, web designs, and motion graphics for a modern tech startup. I
-          am also the multimedia creative director for the Asian Kaleidoscope
-          Month (AKM) club.
+          I&apos;m a Graphic Design BFA student at the University of Florida. I love exploring composition, illustration, and motion design to create work that is both engaging and effective. My designs often lean toward playful yet minimalist aesthetics, but I enjoy adapting my approach based on the project&apos;s goals. One of my favorite projects is Remi the Musical Cat, a mascot I created for Anisong. It combines my love for classical music, cats, and art—things that bring joy and creativity into my life.
         </p>
       </div>
     </section>
