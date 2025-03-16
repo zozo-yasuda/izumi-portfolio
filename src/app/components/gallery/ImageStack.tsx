@@ -28,10 +28,10 @@ const ImageStack = forwardRef<HTMLDivElement, ImageStackProps>((props, ref) => {
 
   return (
     <div
-      className="flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2"
       key={props.artwork.key}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      className="overflow-hidden"
       style={{
         position: "relative",
         height: props.artwork.height,

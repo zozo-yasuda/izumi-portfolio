@@ -8,6 +8,8 @@ type ImageStackProps = {
   artwork: Artwork;
 };
 
+
+
 const Gallery = () => {
 
   const [displayedArtworks, setDisplayedArtworks] = useState<Artwork[]>([]);
@@ -39,10 +41,11 @@ const Gallery = () => {
     };
 
 
+
   return (
-    <div className="col-span-2 pt-20 my-auto">
-      <div className="flex flex-col justify-items-start">
-        <TransitionGroup className="mx-auto grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="col-span-2 m-6 place-content-start justify-items-center">
+      <div className="flex flex-col">
+        <TransitionGroup className="container grid gap-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
         {displayedArtworks.map((item) => (
         <Content key={item.key} artwork={item}/>))}
         </TransitionGroup>
