@@ -30,8 +30,12 @@ export default function Page() {
           </h1>
           <div className="absolute z-5 w-full h-1/2 bottom-4 left-auto right-auto bg-rose"></div>
         </span>
-        <p className="w-full lg:w-3/4 text-offblack font-sans tracking-5 pt-8">
-        I'm a Graphic Design BFA student at the University of Florida. I love exploring composition, illustration, and motion design to create work that is both engaging and effective. My designs often lean toward playful yet minimalist aesthetics, but I enjoy adapting my approach based on the project’s goals. One of my favorite projects is Remi the Musical Cat, a mascot I created for Anisong. It combines my love for classical music, cats, and art—things that bring joy and creativity into my life.
+        <br />
+        <h2 className="mb-4 text-green font-sans">
+          Thank you for checking out my website!
+        </h2>
+        <p className="w-full lg:w-3/4 text-offblack font-sans tracking-5">
+          I&apos;m a Graphic Design BFA student at the University of Florida. I love exploring composition, illustration, and motion design to create work that is both engaging and effective. My designs often lean toward playful yet minimalist aesthetics, but I enjoy adapting my approach based on the project&apos;s goals. One of my favorite projects is Remi the Musical Cat, a mascot I created for Anisong. It combines my love for classical music, cats, and art—things that bring joy and creativity into my life.
         </p>
       </div>
     </section>
