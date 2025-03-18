@@ -4,10 +4,11 @@ import { artworks } from "../../globals";
 import Link from "next/link";
 
 interface SideBarProps {
-  artwork : Artwork
+  artwork : Artwork;
+  styles?: string;
 }
 
-const Sidebar:React.FC<SideBarProps> = ({artwork}) => {
+const Sidebar:React.FC<SideBarProps> = ({artwork, styles}) => {
   const Tags = () => Array.from(artwork.tags).map((tag, index) => {
     return (
     <li key={index} className="flex bg-rose rounded-full px-5 py-2">
@@ -41,7 +42,7 @@ const Sidebar:React.FC<SideBarProps> = ({artwork}) => {
       }
     }
   return (
-    <aside className="h-screen bg-white sticky top-0">
+    <aside className={styles}>
       <Navigation />
       <div className="sm:pt-6">
         </div>
@@ -57,7 +58,7 @@ const Sidebar:React.FC<SideBarProps> = ({artwork}) => {
       <div className="px-20 text-left pt-4 text-offblack font-sans tracking-5 text-xs sm:text-sm md:text-sm text-pretty">
         {artwork.text}
       </div>
-      <div className="flex justify-between pt-16 px-20 text-left pt-8 text-green font-sans tracking-5 text-xs sm:text-sm md:text-sm">
+      <div className="flex justify-between py-16 px-20 text-left pt-8 text-green font-sans tracking-5 text-xs sm:text-sm md:text-sm">
         {prevButton()}
         {nextButton()}
       </div>
