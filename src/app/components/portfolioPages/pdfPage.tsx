@@ -59,6 +59,22 @@ const PDFPage: React.FC<PDFPageProps> = ({
     }
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth <= 768);
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
+
   interface VideoProps {
     videoFile: string;
   }
@@ -79,30 +95,86 @@ const PDFPage: React.FC<PDFPageProps> = ({
 
   const [numPages, setNumPages] = useState(0);
 
-  return (
-    <section className="bg-offwhite flex flex-col">
-      <div className="grid grid-cols-3">
-        <SidebarComponent artwork={artwork} />
-        <div className="col-span-2 flex flex-col">
-          {video ? <Video videoFile={video}></Video> : <></>}
-          <Document file={fileName} onLoadSuccess={({ numPages }) => {
-            setNumPages(numPages);
-          }}>
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page
-                key={`page_${index + 1}`}
-                pageNumber={index + 1}
-                renderAnnotationLayer={false}
-                renderTextLayer={false}
-                width={Math.floor((2 / 3) * pageWidth)}
-              />
-            ))}
-          </Document>
-          {mindfullVideo1 ? <Video videoFile={mindfullVideo1}></Video> : <></>}
-          {mindfullVideo2 ? <Video videoFile={mindfullVideo2}></Video> : <></>}
+  const Component = () => {
+    return (
+      <section className="bg-offwhite flex flex-col">
+        <div className="grid grid-cols-3">
+          <SidebarComponent artwork={artwork} />
+          <div className="col-span-2 flex flex-col">
+            {video ? <Video videoFile={video}></Video> : <></>}
+            <Document
+              file={fileName}
+              onLoadSuccess={({ numPages }) => {
+                setNumPages(numPages);
+              }}
+            >
+              {Array.from(new Array(numPages), (el, index) => (
+                <Page
+                  key={`page_${index + 1}`}
+                  pageNumber={index + 1}
+                  renderAnnotationLayer={false}
+                  renderTextLayer={false}
+                  width={Math.floor((2 / 3) * pageWidth)}
+                />
+              ))}
+            </Document>
+            {mindfullVideo1 ? (
+              <Video videoFile={mindfullVideo1}></Video>
+            ) : (
+              <></>
+            )}
+            {mindfullVideo2 ? (
+              <Video videoFile={mindfullVideo2}></Video>
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    );
+  };
+
+  const MobileComponent = () => {
+    return (
+      <section className="bg-offwhite flex flex-col">
+        <div className="flex flex-col">
+          <SidebarComponent artwork={artwork} />
+          <div className="col-span-2 flex flex-col">
+            {video ? <Video videoFile={video}></Video> : <></>}
+            <Document
+              file={fileName}
+              onLoadSuccess={({ numPages }) => {
+                setNumPages(numPages);
+              }}
+            >
+              {Array.from(new Array(numPages), (el, index) => (
+                <Page
+                  key={`page_${index + 1}`}
+                  pageNumber={index + 1}
+                  renderAnnotationLayer={false}
+                  renderTextLayer={false}
+                  width={Math.floor((2 / 3) * pageWidth)}
+                />
+              ))}
+            </Document>
+            {mindfullVideo1 ? (
+              <Video videoFile={mindfullVideo1}></Video>
+            ) : (
+              <></>
+            )}
+            {mindfullVideo2 ? (
+              <Video videoFile={mindfullVideo2}></Video>
+            ) : (
+              <></>
+            )}
+          </div>
+        </div>
+      </section>
+    );
+  };
+
+  return (
+    <div>{isMobile ? <div>{Component()}</div> : <div>{MobileComponent()}</div>}</div>
   );
 };
 
