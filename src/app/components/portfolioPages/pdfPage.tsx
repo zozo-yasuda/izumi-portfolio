@@ -15,7 +15,7 @@ const Page = dynamic(() => import("react-pdf").then((module) => module.Page), {
 
 interface SideBarProps {
   artwork: Artwork;
-  styles: string;
+  styles?: string;
 }
 
 interface PDFPageProps {
