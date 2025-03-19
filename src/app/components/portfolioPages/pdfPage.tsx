@@ -94,6 +94,20 @@ const PDFPage: React.FC<PDFPageProps> = ({
     );
   };
 
+  const MobileVideo: React.FC<VideoProps> = ({ videoFile }) => {
+    return (
+      <video
+        width={ pageWidth}
+        height="240"
+        controls
+        preload="none"
+      >
+        <source src={videoFile} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    );
+  };
+
   const [numPages, setNumPages] = useState(0);
 
   const Component = () => {
@@ -132,7 +146,7 @@ const PDFPage: React.FC<PDFPageProps> = ({
     return (
       <div className="flex flex-col">
         <SidebarComponent artwork={artwork} styles="bg-white" />
-        {video ? <Video videoFile={video}></Video> : <></>}
+        {video ? <MobileVideo videoFile={video}></MobileVideo> : <></>}
         <Document
           file={fileName}
           onLoadSuccess={({ numPages }) => {
@@ -149,8 +163,8 @@ const PDFPage: React.FC<PDFPageProps> = ({
             />
           ))}
         </Document>
-        {mindfullVideo1 ? <Video videoFile={mindfullVideo1}></Video> : <></>}
-        {mindfullVideo2 ? <Video videoFile={mindfullVideo2}></Video> : <></>}
+        {mindfullVideo1 ? <MobileVideo videoFile={mindfullVideo1}></MobileVideo> : <></>}
+        {mindfullVideo2 ? <MobileVideo videoFile={mindfullVideo2}></MobileVideo> : <></>}
       </div>
     );
   };

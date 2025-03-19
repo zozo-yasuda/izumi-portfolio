@@ -26,16 +26,49 @@ const ImageStack = forwardRef<HTMLDivElement, ImageStackProps>((props, ref) => {
     </div>
   ));
 
+  const [pageWidth, setPageWidth] = useState(0);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setPageWidth(window.innerWidth);
+
+      const handleResize = () => {
+        setPageWidth(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth <= 768);
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
+
   return (
     <div
       key={props.artwork.key}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="overflow-hidden"
+      className=""
       style={{
         position: "relative",
-        height: props.artwork.height,
-        width: props.artwork.width,
+        height: isMobile?Math.floor((2 / 3) * pageWidth):props.artwork.height,
+        width: isMobile?Math.floor((2 / 3) * pageWidth):props.artwork.width,
       }}
       ref={ref} 
     >
@@ -53,8 +86,8 @@ const ImageStack = forwardRef<HTMLDivElement, ImageStackProps>((props, ref) => {
         <LazyLoadImage
           src={props.artwork.thumbnail}
           alt={props.artwork.title}
-          width={props.artwork.width}
-          height={props.artwork.width}
+          width={isMobile?Math.floor((2 / 3) * pageWidth):props.artwork.width}
+          height={isMobile?Math.floor((2 / 3) * pageWidth):props.artwork.width}
           style={{
             transition: "opacity 0.5s ease-in-out",
             opacity: isHovered ? 0 : 1,

@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --background: offwhite;
+  --background: white;
 }
 
 @font-face {

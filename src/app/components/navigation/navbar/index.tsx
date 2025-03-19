@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,11 +19,44 @@ const Navbar = () => {
     );
   };
 
+    const [pageWidth, setPageWidth] = useState(0);
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        setPageWidth(window.innerWidth);
+  
+        const handleResize = () => {
+          setPageWidth(window.innerWidth);
+        };
+  
+        window.addEventListener("resize", handleResize);
+  
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+      }
+    }, []);
+  
+    const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
+  
+      if (typeof window !== "undefined") {
+        setIsMobile(window.innerWidth <= 768);
+        window.addEventListener("resize", handleResize);
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+      }
+    }, []);
+
   return (
     <nav className="sticky bg-white flex col-span-1 z-50 top-0 p-5">
       <>
         <div className="flex flex-col justify-between">
-          <div className="pl-10">
+          <div className={isMobile?"pl-10 mx-auto":"pl-10"}>
             <ul className=" text-xs flex flex-row items-center gap-x-3">
               <li className="p-2 pl-5">
                 <Logo />
