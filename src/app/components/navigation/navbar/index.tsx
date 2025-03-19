@@ -63,7 +63,7 @@ const Navbar = () => {
             <li>
               <Link
                 href={"/"}
-                className="relative font-bold z-10 py-2 px-7 rounded-full block text-offblack bg-transparent font-sans uppercase tracking-24 border-2 border-offblack hover:text-white hover:border-transparent hover:bg-offblack"
+                className="relative font-bold z-10 py-2 px-7 rounded-full block text-red bg-rose font-sans uppercase tracking-24 border-2 border-red"
               >
                 work
               </Link>
