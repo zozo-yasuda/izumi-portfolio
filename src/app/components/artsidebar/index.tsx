@@ -79,19 +79,19 @@ const Sidebar: React.FC<SideBarProps> = ({ artwork, styles }) => {
     <aside className={styles}>
       <Navigation />
       <div className="pb-2"></div>
-      <div className="px-10 sm:px-20 pt-2 text-lime uppercase font-tomarik text-4xl md:text-5xl lg:text-6xl">
+      <div className="px-10 md:px-20 pt-2 text-lime uppercase font-tomarik text-4xl md:text-5xl lg:text-6xl">
         {artwork.title}
       </div>
-      <div className="px-10 sm:px-20 tracking-24 font-tomarik text-offblack text-xl md:text-lg lg:text-xl">
+      <div className="px-10 md:px-20 tracking-24 font-tomarik text-offblack text-xl md:text-lg lg:text-xl">
         {artwork.subtitle}
       </div>
-      <ul className="pt-4 px-10 sm:px-20 py-2 uppercase text-bold text-green tracking-18 font-sans flex flex-row flex-wrap gap-x-2 gap-y-3 text-sm">
+      <ul className="pt-4 px-10 md:px-20 py-2 uppercase text-bold text-green tracking-18 font-sans flex flex-row flex-wrap gap-x-2 gap-y-3 text-sm">
         {Tags()}
       </ul>
-      <div className="px-10 sm:px-20 text-left pt-4 text-offblack font-sans tracking-5 text-sm text-pretty">
+      <div className="px-10 md:px-20 text-left pt-4 text-offblack font-sans tracking-5 text-sm text-pretty">
         {artwork.text}
       </div>
-      <div className="flex justify-between py-16 px-10 sm:px-20 text-left pt-8 text-green font-sans tracking-5 text-sm">
+      <div className="flex justify-between py-16 px-10 md:px-20 text-left pt-8 text-green font-sans tracking-5 text-sm">
         {prevButton()}
         {nextButton()}
       </div>

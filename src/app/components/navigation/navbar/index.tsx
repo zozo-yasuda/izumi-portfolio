@@ -53,9 +53,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="sticky bg-white flex sm:col-span-1 z-50 top-0">
+    <nav className="sticky bg-white flex md:col-span-1 z-50 top-0">
       <>
-        <div className={isMobile ? "p-5" : "pl-20 py-5"}>
+        <div className="p-5 md:pl-20 md:py-5">
           <ul className="text-xs flex flex-row items-center gap-x-2 sm:gap-x-3 ">
             <li className="p-2 pl-5">
               <Logo />
